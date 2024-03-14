@@ -2,7 +2,7 @@
 layout: home
 title: 'Webex CC Lab guides'
 permalink: /
-cover: {{site.baseurl}}/assets/gitbook/images/Home.jpeg
+cover: /wxccintrolabs/assets/gitbook/images/Home.jpeg
 ---
 
 
