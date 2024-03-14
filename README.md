@@ -20,9 +20,9 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 4  |          [Supervisor Desktop]({{site.baseurl}}/pages/Supervisor/)           |   EASY    |  40 min   |
 | Lab 5  |           [Analyzer Deep Dive]({{site.baseurl}}/pages/Analyzer/)            |    MID    |  120 min   |
 | Lab 6  |               [CRM Integration]({{site.baseurl}}/pages/CRM/)                |   HARD    |  90 min   |
-| Lab 7  |        [Google CCAI & TTS Integration](/pages/CCAI/)        |   MID    |  90 min   |
+| Lab 7  |        [Google CCAI & TTS Integration]({{site.baseurl}}/pages/CCAI/)        |   MID    |  90 min   |
 | Lab 8  |             [Feedback and Journey]({{site.baseurl}}/pages/JDS_XM/)             |    EASY    |  30 min   |
-| Lab 9  |       [Outbound Campaign - Acqueon](/pages/Acqueon/)        |    MID    |  30 min   |
+| Lab 9  |       [Outbound Campaign - Acqueon]({{site.baseurl}}/pages/Acqueon/)        |    MID    |  30 min   |
 | Lab 10 |            [QM/WFO - Calabrio]({{site.baseurl}}/pages/Calabrio/)            |    TBD    |  TBD  |
 | Lab 11 |                [Webex CC APIs]({{site.baseurl}}/pages/API/)                 |   HARD    |  90 min   |
 | Lab 12 |             [Digital Channels]({{site.baseurl}}/pages/Digital/)             |    MID    |  560 min  |
