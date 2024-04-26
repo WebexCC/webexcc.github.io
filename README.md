@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: home
 title: 'Webex CC Lab guides'
 permalink: /
@@ -30,4 +30,28 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 
 <center><img src="{{site.baseurl}}/assets/gitbook/images/webex.png" width="100"></center>
+ -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webex Contact Center Knowledge Hub</title>
+  <script type="module" src="https://webexcc-sa.github.io/dist/hub-widgets/hub-widgets.esm.js"></script>
+  <script nomodule src="https://webexcc-sa.github.io/dist/index.js"></script>
+  <link rel="stylesheet" href="https://webexcc-sa.github.io/style.css">
+</head>
+
+<body>
+  <pagetitle>
+    <h1>Webex Contact Center Knowledge Hub (beta)</h1>
+
+  </pagetitle>
+
+
+  <k-hub-tiles t-list="https://webexcc-sa.github.io/tiles.json,https://webexcc-sa.github.io/tools/advertise/tiles.json"></k-hub-tiles>
+  <k-hub-links l-list="https://webexcc-sa.github.io/links.json"></k-hub-links>
+</body>
+
+</html>
