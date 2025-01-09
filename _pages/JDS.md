@@ -1,5 +1,5 @@
 ---
-title: Enable JDS
+title: Enable Customer Journey Data Services (CJDS)
 date: 2024-01-09
 layout: post
 ---
