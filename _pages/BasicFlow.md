@@ -4,7 +4,7 @@ date: 2024-01-09
 layout: post
 ---
 
-# Webex Contact Center Initial Setup & Basic Flow Build
+## Webex Contact Center Initial Setup & Basic Flow Build
 
 ## Important Links:  
   
@@ -21,7 +21,7 @@ WxCC Agent/Supervisor Desktop:
 WxCC User Guides :
 <https://www.cisco.com/c/en/us/support/customer-collaboration/webex-contact-center/series.html>
 
-## Set up users & add Webex Calling licenses
+# Set up users & add Webex Calling licenses
 
 Log into Webex Control Hub: <https://admin.webex.com>
 
@@ -84,19 +84,19 @@ Note about Sites
 > 
 > In WxCC, you can optionally create a new site to section off users
 > (generally for different physical locations). For the purposes of this
-> documentation, <u>we recommend keeping all of your users located in one
-> site</u>. There are certain features and functions that do not cross
+> documentation, *we recommend keeping all of your users located in one
+> site*. There are certain features and functions that do not cross
 > site boundaries. For example, a user must be tied to ONE site and a team
 > must be tied to ONE site. If user Amy is tied to site Chicago, and the
 > team Helpdesk is tied to site Denver, Amy can NOT be associated with the
 > team Helpdesk.
 
-### Create Skill Definitions & Skill Profiles
+# Create Skill Definitions & Skill Profiles
 
 Skills will be integrated into a skill profile, and these can be used to
 define who gets a call initially, when/if the call is relaxed, etc.
 
-#### Skill Definitions
+### Skill Definitions
 
 1. Under “User Management” click Skill Definitions
 2. Click on Create Skill Definition
@@ -107,7 +107,7 @@ define who gets a call initially, when/if the call is relaxed, etc.
 7. Click Create
 8. Repeat as needed
 
-#### Skill Profile
+### Skill Profile
 
 1. Under “User Management” click Skill Profile
 2. Click on Create Skill Profile
@@ -118,7 +118,7 @@ define who gets a call initially, when/if the call is relaxed, etc.
 6. Click Create
 7. Repeat as needed
 
-#### Create Idle/Wrap Up Codes
+### Create Idle/Wrap Up Codes
 
 Codes are used for reporting purposes. Create as many as needed. Idle
 codes are for when an agent is not available, and wrap up codes are tied
@@ -133,7 +133,7 @@ to interactions once they are complete.
 7. Click Create
 8. Repeat as needed
 
-#### Modify existing Desktop Profile
+### Modify existing Desktop Profile
 
 Desktop profiles are assigned to agents so that they can have the
 correct Aux Codes, DN Validation, Outdial, etc. The existing profiles
@@ -161,7 +161,7 @@ more complex of an environment may mean more teams.
 8. Click Create
 9. Repeat as needed
 
-#### Enable Users for WxCC
+### Enable Users for WxCC
 
 > NOTE User Intervention Required 
 > This step cannot be completed until the users have activated their Webex accounts. You may need to wait until the user has performed this step.
@@ -183,7 +183,7 @@ Edit each user and change the following settings:
 7. Click Save
 8. Repeat for all users as needed
 
-#### Create a Queue
+# Create a Queue
 
 Queues are virtual containers for contacts to be held until they can be
 answered by an available agent. Calls can be routed either by Longest
@@ -208,7 +208,7 @@ Available Agent, or Skills Based.
 16. Click Create
 17. Repeat as needed
 
-#### Create a Flow
+# Create a Flow
 
 A flow is essentially a call script and will dictate where the call goes
 once it enters the system. This work will be done from the flow
@@ -229,7 +229,7 @@ designer.
 
 ![flow](./assets/images/BasicFlow/flow.png)
 
-#### Create Channels (Entry Point with phone number mapping)
+# Create Channels (Entry Point with phone number mapping)
 
 Channels (Entry Points) are points where calls enter the CC. A support
 number will point a phone number/DID to the Entry Point
@@ -246,7 +246,7 @@ number will point a phone number/DID to the Entry Point
 10. Select Webex Calling Location and Select Support Number. Click check mark
 11. Click Create
 
-## Testing your configuration
+# Testing your configuration
 
 1. Log your agent into the WxCC Agent Desktop
   <https://desktop.wxcc-us1.cisco.com/>
