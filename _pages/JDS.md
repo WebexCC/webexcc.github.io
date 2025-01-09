@@ -6,6 +6,8 @@ layout: post
 
 # Customer Journey Data Services (CJDS)
 
+> `Note:` Please refer to [Webex CC Labs](https://webexcc.github.io/pages/JDS_XM/#customer-journey-data-services-cjds) for better understanding of CJDS feature in Webex CC.
+
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
