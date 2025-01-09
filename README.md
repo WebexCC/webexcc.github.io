@@ -16,7 +16,7 @@ Detailed explanation and configuration steps can be reviewed on <https://webexcc
 | Doc ID |                      Document Title                         | 
 |:------:|:-----------------------------------------------------------:|
 | 1 | [Basic WxCC Call Flow](/pages/BasicFlow/) |
-| 2 | [Enable JDS](/pages/JDS/)  |
+| 2 | [Enable Customer Journey Data Services (CJDS)](/pages/JDS/)  |
 
 
 <center><img src="/assets/gitbook/images/ccep.png" width="100"></center>
