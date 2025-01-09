@@ -8,8 +8,10 @@ cover: /assets/gitbook/images/Home.jpeg
 
 Welcome to the CCEP Team documentation repository. Here you will find quick step-by-step guides on how to enable and configure the Webex Contact Center.
 
+Detailed explanation and configuration steps can be reviewed on <https://webexcc.github.io>.
 
-## Lab Content
+
+## Repository Content
 
 | Doc ID |                      Document Title                         | 
 |:------:|:-----------------------------------------------------------:|
