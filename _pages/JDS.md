@@ -1,3 +1,9 @@
+---
+title: Enable JDS
+date: 2024-01-09
+layout: post
+---
+
 # Customer Journey Data Services (CJDS)
 
 ### Overview of the Lab
