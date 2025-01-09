@@ -84,8 +84,8 @@ Note about Sites
 > 
 > In WxCC, you can optionally create a new site to section off users
 > (generally for different physical locations). For the purposes of this
-> documentation, *we recommend keeping all of your users located in one
-> site*. There are certain features and functions that do not cross
+> documentation, **we recommend keeping all of your users located in one
+> site**. There are certain features and functions that do not cross
 > site boundaries. For example, a user must be tied to ONE site and a team
 > must be tied to ONE site. If user Amy is tied to site Chicago, and the
 > team Helpdesk is tied to site Denver, Amy can NOT be associated with the
