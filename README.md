@@ -16,7 +16,7 @@ Detailed explanation and configuration steps can be reviewed on <https://webexcc
 | Doc ID |                      Document Title                         | 
 |:------:|:-----------------------------------------------------------:|
 | 1 | [Basic WxCC Call Flow](/pages/BasicFlow/) |
-
+| 2 | [Enable JDS in WxCC] (/pages/JDSenable/)  |
 
 
 <center><img src="/assets/gitbook/images/ccep.png" width="100"></center>
