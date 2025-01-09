@@ -6,32 +6,6 @@ layout: post
 
 # Customer Journey Data Services (CJDS)
 
-### Overview of the Lab
-
-In this lab, we will understand what is the **Customer Journey Data Services (JDS)** feature, how we can set it up and configure it in the Control Hub and how to enable the JDS Desktop widget for agents. Furthermore, we will see the Customer Journey Widget in action from an agent perspective and we will delve into all the API capabilities that the features offers.
-
-Finally, we will become familiar with the **JDS Use Case library** that Cisco has created to showcase how JDS can help you take your customers' journey to the next level.
-
-### Lab Objective
-
-At the end of this lab, you will be able to:
-
-- **Enable JDS feature** and the Customer Journey Widget in your tenant.
-- Create and manipulate an **end-user database** with your customer information.
-- Add the **Customer Journey Widget** to your Agent Desktop and take advantage of it during a customer interaction.
-- Utilize the **JDS APIs** to enhance the customer journey experience with additional insights & actions.
-
-### Pre-requisites
-
-1.  You have **completed** `Lab 1 - Admin Experience`:
-    - You are familiar with Control Hub and navigation within Control Hub, logging in as an administrator.
-2.  You have **completed** `Lab 2 - IVR Contact Routing`:
-    - You are familiar with creating and modifying flows.
-3.  You have **completed** `Lab 3 - Agent Desktop`:
-    - You are familiar with logging in as an Agent and accepting inbound interactions.
-    - You are familiar with creating a custom Desktop Layout.
-4.  You have **Webex Calling installed** in your device and can make calls to the contact center.
-
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
