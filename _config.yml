@@ -1,7 +1,7 @@
 # Configurations
-title:            Labs Library
-longtitle:        Webex CC
-email:            wxcclabs@cisco.com
+title:            CCEP Documentation Repository
+longtitle:        CCEP Documentation to start Trial tenant
+email:            ccep@cisco.com
 description: >
   Lab Guide Library
 
@@ -9,7 +9,7 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://webexcc.github.io'
+url:              'https://teamccep.github.io'
 baseurl:          ''
 
 rss:              RSS
@@ -23,7 +23,7 @@ toc:
   h_max: 1
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     assets/gitbook/images/favicon.ico
+favicon_path:     assets/gitbook/images/ccepfavicon.ico
 
 # markdown render engine.
 markdown:         kramdown
@@ -58,7 +58,7 @@ destination:      ./_site
 incremental:      false
 regenerate:       true
 
-google_analytics: G-X0KSF40MEY
+#google_analytics: G-X0KSF40MEY
 
 plugins:
   - jekyll-feed
