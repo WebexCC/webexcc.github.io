@@ -17,5 +17,5 @@ Welcome to the CCEP Team documentation repository. Here you will find quick step
 
 
 
-<center><img src="/assets/gitbook/images/webex.png" width="100"></center>
+<center><img src="/assets/gitbook/images/ccep.png" width="100"></center>
 
