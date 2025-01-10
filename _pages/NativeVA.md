@@ -18,76 +18,74 @@
  
 ![4.2](/assets/images/NativeVA/4.2.png)
 
-4. **Q&A Bots** are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers. Q&A bot is available for Digital Channel.</li>
-  <li><b>Task Bots</b> enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. Task Bot  is available for Voice and Digital Channel.</li>
-</ul></li>
-  <li>On the left side there also modules for <b> Knowledge , Analytics</b>  and <b> Help</b> . Under <b>Knowledge</b>  you can add Knowledge bases and configure them with your bots. 
-<br> 
-<img src="../assets/4.3.png"> <br>
-<br> 
-<ul>
-  <li>In the Analytics module you can monitor the bot activity by selecting the bot from the list, specify Data range and other options. </li>
-<br> 
-<img src="../assets/4.4.png"> <br>
-<br> 
-  <li>The Help module directs you to the Webex Bot Builder documentation page.</li>
-<br> 
-<img src="../assets/4.5.png"> <br>
-<br> 
-</ul></li>
-</ol> 
+4. **Q&A Bots** are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers. Q&A bot is available for Digital Channel.
+5. **Task Bots** enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. Task Bot  is available for Voice and Digital Channel.
 
-## <span style="color: #049fd9;">Task 2. Create Task Bot.</span>
+6. On the left side there also modules for **Knowledge , Analytics** and **Help**. Under **Knowledge** you can add Knowledge bases and configure them with your bots. 
+
+![4.3](/assets/images/NativeVA/4.3.png)
+
+7. In the Analytics module you can monitor the bot activity by selecting the bot from the list, specify Data range and other options.
+ 
+![4.4](/assets/images/NativeVA/4.4.png)
+
+8. The Help module directs you to the Webex Bot Builder documentation page.</li>
+
+ 
+![4.5](/assets/images/NativeVA/4.5.png)
+
+##Task 2. Create Task Bot.
 
 Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Task bots enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. In this lab we would see how to build these Bot to deliver the customer experiences. 
 
-<ol>
-  <li>Select <b>Task</b> bots and click on create <b>New Task Bot.</b> </li>
-<br> 
-<img src="../assets/4.6.png"> <br>
-<br> 
-  <li>On the following page you can see that you can utilize some of the prebuild Virtual Agents.
-  <ul>
-  <li>To see that <b>Intents</b> and <b>Utterances</b> that are prebuild, click on the <b>Details</b> button or the <b>Appointment Booking</b> Bot.  </li>
-  <li>After the review, select the <b>Appointment Booking</b> prebuild agent for this lab. Then click on <b>Next.</b> </li>
-</ul></li>
-<br> 
-<img src="../assets/4.7.png"> <br>
-<br> 
-  <li>Add your attendee ID (CL_IDxxx) to the name, <b>Allow feedback</b> and click on <b>Import.</b> </li>
-<br> 
-<img src="../assets/4.8.png"> <br>
-<br> 
-  <li>Now make your bot live by clicking <b>“Make Live”</b> option
-  <br>
-  Enter text “Test”</li>
-<br> 
-<img src="../assets/4.9.png"> <br>
-<br> 
-  <li>Now open your Webex Contact Center flow CL_{YourID}_WxCC_DialogflowCX
-  <ul>
-  <li>Enable Edit</li>
-  <li>Select <b>Virtual Agent V2</b> activity and select the Task Bot that you just created. </li>
-  <li>Go to the settings, in the <b>“Contact Center AI config”</b> switch from currently selected <b>Google Dialogflow CX</b> connector to <b>Cisco native Virtual Agent</b> connector by selecting <b>Webex CCAI Config.</b> </li>
-  <li>Once selected, you will notice all the Native Task Bots under Virtual Agent.</li>
-  <li>Select your BOT created in previous step named with your ID. </li>
-  <li><b>Validate</b> and <b>Publish</b> the flow. </li>
-</ul></li>
-<br> 
-<img src="../assets/4.10.png"> <br>
-<be>
-<li>Call the inbound dial number that is configured with your Entry Point / Channel to book an appointment. 
-<ul>
-  <li>You should see that bot is well configured to answer to your question and collect the information from you. </li>
-  <li>At the end ask to <b>speak with an agent</b> and the call will be moved to the Sales queue as this is <b>default</b> routing configured in the <b>Case activity</b> in the WxCC flow.</li>
-</ul></li>
-<br> 
-<img src="../assets/4.11.png"> <br>
-<be>
-</ol>
+1. Select **Task** bots and click on create **New Task Bot**.
+
+![4.6](/assets/images/NativeVA/4.6.png)
+
+2. On the following page you can see that you can utilize some of the prebuild Virtual Agents.
+
+3. To see that **Intents** and **Utterances** that are prebuild, click on the **Details** button or the **Appointment Booking** Bot.
+
+4. After the review, select the **Appointment Booking** prebuild agent for this lab. Then click on **Next**.
+
+![4.7](/assets/images/NativeVA/4.7.png)
+
+5. Add your attendee ID (CL_IDxxx) to the name, **Allow feedback** and click on **Import**.
+
+![4.8](/assets/images/NativeVA/4.8.png)
+
+6. Now make your bot live by clicking **Make Live** option
+
+7. Enter text “Test”
+
+![4.9](/assets/images/NativeVA/4.9.png)
+
+8. Now open your Webex Contact Center flow CL_{YourID}_WxCC_DialogflowCX
+
+9. Enable Edit
+
+10. Select **Virtual Agent V2** activity and select the Task Bot that you just created.
+
+11. Go to the settings, in the **Contact Center AI config** switch from currently selected **Google Dialogflow CX** connector to **Cisco native Virtual Agent** connector by selecting **Webex CCAI Config**.
+
+12. Once selected, you will notice all the Native Task Bots under Virtual Agent.
+
+13. Select your BOT created in previous step named with your ID.
+
+14. **Validate** and **Publish** the flow.
+
+![4.10](/assets/images/NativeVA/4.10.png)
+
+15. Call the inbound dial number that is configured with your Entry Point / Channel to book an appointment. 
+
+16. You should see that bot is well configured to answer to your question and collect the information from you.
+
+17. At the end ask to **speak with an agent** and the call will be moved to the Sales queue as this is **default** routing configured in the **Case activity** in the WxCC flow.
+
+![4.11](/assets/images/NativeVA/4.11.png)
 
 
-## <span style="color: #049fd9;">Task 3. Understand the bot configuration modules. </span>
+## Task 3. Understand the bot configuration modules.
 
 <ol>
   <li>By clicking on <b>Preview</b>, you can interact with the bot on the chat window and test if this is working as suspect or some configurations need to be corrected. </li>
