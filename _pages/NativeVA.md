@@ -1,20 +1,18 @@
 
 
-# <span style="color: #049fd9;">Exercise 2.4: Cisco Native Virtual Agent for voice channel (NEW!!) </span>
+# Exercise 2.4: Cisco Native Virtual Agent for voice channel (NEW!!)
 
-<b>Webex Connect Bot Builder</b> is a Cloud AI platform that offers native conversational omni-channel virtual agent service to customers via a Cisco Contact Center AI (CCAI) solution. The CCAI solution orchestrates and automates voice-based and digital interactions with the end users. To use the Webex, Connect Bot Builder, you need to provision the Webex Connect digital services for your organization. 
-<be>
-<b>In this lab</b> you will configure Virtual Agent Voice for Webex Contact Center using Cisco's native Conversation AI solution powered by Webex Connect Bot Builder. 
+**Webex Connect Bot Builder** is a Cloud AI platform that offers native conversational omni-channel virtual agent service to customers via a Cisco Contact Center AI (CCAI) solution. The CCAI solution orchestrates and automates voice-based and digital interactions with the end users. To use the Webex, Connect Bot Builder, you need to provision the Webex Connect digital services for your organization. 
 
-## <span style="color: #049fd9;">Task 1. Dashboard overview.</span>
+**In this lab** you will configure Virtual Agent Voice for Webex Contact Center using Cisco's native Conversation AI solution powered by Webex Connect Bot Builder. 
 
-<ol>
-  <li>From the Control Hub, navigate to <b>Contact Center > Overview </b>
-  <ul>
-  <li>On the <b>Quick Links</b> section click on <b>Webex Connect Bot Builder.</b> </li>
-</ul></li>
-<br> 
-<img src="../assets/4.1.png"> <br>
+## Task 1. Dashboard overview.
+
+
+1. From the Control Hub, navigate to **Contact Center > Overview**
+2. On the **Quick Links** section click on **Webex Connect Bot Builder.** </li>
+ 
+![4.1](/assets/images/NativeVA/4.1.png)
 <br> 
   <li>On the top of the Dashboard, you will see two type of bots available: <b>Q&A bots and Task bots.</b> 
   <br> 
