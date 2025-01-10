@@ -13,13 +13,12 @@
 2. On the **Quick Links** section click on **Webex Connect Bot Builder.** </li>
  
 ![4.1](/assets/images/NativeVA/4.1.png)
-<br> 
-  <li>On the top of the Dashboard, you will see two type of bots available: <b>Q&A bots and Task bots.</b> 
-  <br> 
-<img src="../assets/4.2.png"> <br>
-<br> 
-<ul>
-  <li><b>Q&A Bots</b> are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers. Q&A bot is available for Digital Channel.</li>
+
+3. On the top of the Dashboard, you will see two type of bots available: <b>Q&A bots and Task bots.</b> 
+ 
+![4.2](/assets/images/NativeVA/4.2.png)
+
+4. **Q&A Bots** are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers. Q&A bot is available for Digital Channel.</li>
   <li><b>Task Bots</b> enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. Task Bot  is available for Voice and Digital Channel.</li>
 </ul></li>
   <li>On the left side there also modules for <b> Knowledge , Analytics</b>  and <b> Help</b> . Under <b>Knowledge</b>  you can add Knowledge bases and configure them with your bots. 
