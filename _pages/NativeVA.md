@@ -176,7 +176,7 @@ Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Ta
 ![1Picture14](/assets/images/NativeVA/1Picture14.gif)
 
 * If the **BOT encounter an error**, fallback intent, bad feedback or poor intent configuration you can see the details in the **Curation** module. 
-	* Make a note of count under <b>Fallback</b></li>
+	* Make a note of count under **Fallback**
 
 	* Click on **Preview** and enter **“Test”**. 
    * It will trigger response related to the **Fallback Intent** as “test” phrase is not specified in any intent.
