@@ -10,11 +10,11 @@
 
 
 1. From the Control Hub, navigate to **Contact Center > Overview**
-2. On the **Quick Links** section click on **Webex Connect Bot Builder.** </li>
+2. On the **Quick Links** section click on **Webex Connect Bot Builder.**
  
 ![4.1](/assets/images/NativeVA/4.1.png)
 
-3. On the top of the Dashboard, you will see two type of bots available: <b>Q&A bots and Task bots.</b> 
+3. On the top of the Dashboard, you will see two type of bots available: **Q&A bots and Task bots.**
  
 ![4.2](/assets/images/NativeVA/4.2.png)
 
@@ -29,7 +29,7 @@
  
 ![4.4](/assets/images/NativeVA/4.4.png)
 
-8. The Help module directs you to the Webex Bot Builder documentation page.</li>
+8. The Help module directs you to the Webex Bot Builder documentation page.
 
  
 ![4.5](/assets/images/NativeVA/4.5.png)
