@@ -1,8 +1,6 @@
-# Exercise 2.4: Cisco Native Virtual Agent for voice channel (NEW!!)
+# Cisco Native Virtual Agent for voice channel (NEW!!)
 
 **Webex Connect Bot Builder** is a Cloud AI platform that offers native conversational omni-channel virtual agent service to customers via a Cisco Contact Center AI (CCAI) solution. The CCAI solution orchestrates and automates voice-based and digital interactions with the end users. To use the Webex, Connect Bot Builder, you need to provision the Webex Connect digital services for your organization.
-
-**In this lab** you will configure Virtual Agent Voice for Webex Contact Center using Cisco's native Conversation AI solution powered by Webex Connect Bot Builder.
 
 ## Task 1. Dashboard overview
 
