@@ -25,7 +25,7 @@
 8. The Help module directs you to the Webex Bot Builder documentation page.
 ![4.5](/assets/images/NativeVA/4.5.png)
 
-## Task 2. Create Task Bot.
+## Task 2. Create Task Bot
 
 Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Task bots enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. In this lab we would see how to build these Bot to deliver the customer experiences.
 
@@ -95,7 +95,7 @@ Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Ta
 * Go Back by clicking the arrow next to the intent **<-Talk to an agent.**
  ![1Picture5](/assets/images/NativeVA/1Picture5.gif)
 
-7. Now we need to train the BOT to start using modified Intent.
+1. Now we need to train the BOT to start using modified Intent.
 
 * Click on **NLU Engine**
 * Select the **Engine** option: Mindmeld (Other options: RASA -BETA, Swiftmatch)
