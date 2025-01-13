@@ -87,148 +87,130 @@ Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Ta
 
 ## Task 3. Understand the bot configuration modules.
 
-<ol>
-  <li>By clicking on <b>Preview</b>, you can interact with the bot on the chat window and test if this is working as suspect or some configurations need to be corrected. </li>
-<br> 
-<img src="../assets/4.12.png"> <br>
-<br> 
-  <li>The bot supports <b>multiple languages</b>. While on Settings module click on <b>Language</b> and add <b>English</b> language from the drop-down, <b>if the language is not there</b>. 
-  <ul>
-  <li>Click on <b>Update bot.</b> </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture2.gif"> <br>
-<br> 
-  <li>On the <b>Training module</b> you can see the <b>Intents</b> and their configurations : <b>Intent Name</b>, <b>count of Utterances</b>, and <b>Response name</b> etc. </li>
-<br> 
-<img src="../assets/1Picture3.png"> <br>
-<br> 
-  <li>Open the <b>“Talk to an agent”</b> intent you can see the option to add more <b>utterances</b> and configure the <b>response.</b> </li>
-<br> 
-<img src="../assets/1Picture4.png"> <br>
-<br> 
-  <li>Generate more utterances using AI.
-  <be>
-  <b>Click</b> on <b>Generate</b> options. This allows us to cover possible options a customer can use to reach this option in a conversation.  
-  <ul>
-  <li>Provide the description for the utterances. Like <b>“Reach an agent”</b></li>
-  <li>Select the number of variants enter <b>8</b> </li>
-  <li>Click on <b>Generate.</b> </li>
-  <li>Save the <b>Intent</b></li>
-  <li>Go Back by clicking the arrow next to the intent <b><-Talk to an agent.</b> </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture5.gif"> <br>
-<br>    
-  <li>Now we need to train the BOT to start using modified Intent. 
-  <ul>
-  <li>Click on <b>NLU Engine</b> </li>
-  <li>Select the <b>Engine</b> option: Mindmeld (Other options: RASA -BETA, Swiftmatch)</li>
-  <li>Click <b>Update</b></li>
-  <li>Click on <b>Train BOT</b> on the right top corner and provide a comment like "test".</li>
-  <li>Status next to <b>Training data</b> would show <b>Training</b> and then switch to <b>Trained</b>  </li>
-  <li>Click <b>Make Live</b></li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture6.png"> <br>
-<br> 
-  <li><b>Entities</b> are the variables that bot uses store the collected information form the users. For example:  you can see the Entities with name <b>preferred appointment data</b> with Entity type as <b>Day.</b></li>
-<br> 
-<img src="../assets/1Picture7.png"> <br>
-<br> 
-  <li>To add the <b>Entities</b> to the <b>training phrases,</b> go back to <b>Intents</b> and select <b>Book appointment</b> intent. </li>
-<br> 
-<img src="../assets/1Picture8.png"> <br>
-<br> 
-  <li>Add utterance with text “I want to see the doctor on the weekend”.</li>
-<br> 
-<img src="../assets/1Picture9.png"> <br>
-<br> 
-  <li>Scroll down on utterances and Looking at your just added utterance you can see that <b>weekend</b> is marked with different color. </li>
-  <li>System automatically detect it as the <b>time</b> and configure as the <b>Entity.</b> </li>
-<br> 
-<img src="../assets/1Picture10.png"> <br>
-<br> 
-  <li>If you want manually to specify any part of the <b>utterance</b> as the <b>parameter</b>, you can highlight it and option will <b>popup</b> to select the entity from the available list. 
-  <ul>
-  <li>Review the video below, no need to update. </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture11.gif"> <br>
-<br>
-  <li>The <b>Response modules</b> has the template configures. 
-  <ul>
-  <li>There are some Default templates that you can customize but cannot delete or rename.</li>
-  <li>There are also custom templates that you can add to the list. </li>
-  <li>The response can be delivered over multiple channels and on this module you can configure if this should be for Voice or/and any available Digital Channel. </li>
-  <li>On the right side you can see the response types. It could be text, code, audio file, etc.</li>
-<br> 
-<img src="../assets/1Picture12.png"> <br>
-<br>
-</ul></li>
-  <li>Click on <b>Welcome message</b> default response template. 
-  <ul>
-  <li>Select Voice Channel.</li>
-  <li>Modify the Text Variant, for example type “Welcome to Cisco Live! How can I assist you?"</li>
-  <li>Update and Make it Live. </li>
-  <li>Place the test call to your Channel to test that change was applied. </li>
-</ul></li>
-<br> 
-<img src="../assets/New15.gif"> <br>
-<br>
-  <li>On the <b>Testing</b> module you can test if the phrases will be trigger the <b>Response Templates</b> or you need to modify your Intents. 
-  <ul>
-  <li>For example if you want to test message “Agent” against Response template <b>Agent handover,</b> the test will be successful as we have the <b>Talk to an agent</b> intent configured properly. </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture14.gif"> <br>
-<br>
-  <li>If the <b>BOT encounter an error</b>, fallback intent, bad feedback or poor intent configuration you can see the details in the <b>Curation</b> module. 
-  <ul>
-  <li>Make a note of count under <b>Fallback</b></li>
-</ul></li>
-  <li>Click on <b>Preview</b> and enter <b>“Test”</b>. 
-  <ul>
-  <li>It will trigger response related to the <b>Fallback Intent</b> as “test” phrase is not specified in any intent. </li>
-  <li>You can also <b>downvote</b> this response and add <b>comment.</b> </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture15.png"> <br>
-<br>
-  <li>Go back to <b>Curation module or Refresh</b>. You should see that <b>Fallback intent</b> was detected with count went up by 1, as well as <b>Downvoted</b> count incremented. 
-    <ul>
-  <li>Click on <b>Fallback</b> block </li>
-  <li>Click <b>Decrypt</b> </li>
-</ul>
-</li>
-<br> 
-<img src="../assets/1Picture16.png"> <br>
-<br>
-  <li>You should see options to add <b>“test”</b> phrase to an <b>existing Intent, create new intent</b> for it or just <b>ignore</b> this message.
-<br> 
-<img src="../assets/1Picture21.png"> <br>
-<br>
-  <ul>
-  <li>For now just ignore it. </li>
-  <li>But for the production environment this is the place where you can improve your agent response by adding or modifying the intents. </li>
-</ul></li>
-<br> 
-<img src="../assets/1Picture17.png"> <br>
-<br>
-  <li>Under the <b>Session module</b> you can find all the <b>transcript</b> related to the bot interactions. </li>
-<br> 
-<img src="../assets/1Picture18.png"> <br>
-<br>
-  <li>The History <b>Module</b> contains information about your: 
-  <ul>
-  <li>Bot trainings with Intent updates as well as the Audit Logs.</li>
-</ul>
-</li>
-<br> 
-<img src="../assets/1Picture19.png"> <br>
-<br>
-<img src="../assets/1Picture20.png"> <br>
-<br>
-<img src="../assets/2024-05-20_12h11_44.png"> <br>
-<br>
-</ol>
+1. By clicking on **Preview**, you can interact with the bot on the chat window and test if this is working as suspect or some configurations need to be corrected.
+
+![4.12](/assets/images/NativeVA/4.12.png)
+
+2. The bot supports **multiple languages**. While on Settings module click on **Language** and add **English** language from the drop-down, **if the language is not there**. 
+
+3. Click on **Update bot**.
+
+![1Picture2](/assets/images/NativeVA/1Picture2.gif)
+
+4. On the **Training module** you can see the **Intents** and their configurations : **Intent Name**, **count of Utterances**, and **Response name** etc. 
+
+![1Picture3](/assets/images/NativeVA/1Picture3.png)
+ 
+5. Open the **“Talk to an agent”** intent you can see the option to add more **utterances** and configure the **response.** 
+
+![1Picture4](/assets/images/NativeVA/1Picture4.png)
+
+6. Generate more utterances using AI.
+
+* **Click** on **Generate** options. This allows us to cover possible options a customer can use to reach this option in a conversation.  
+* Provide the description for the utterances. Like **“Reach an agent”**
+* Select the number of variants enter **8**
+* Click on **Generate.**
+* Save the **Intent**
+* Go Back by clicking the arrow next to the intent **<-Talk to an agent.**
+
+![1Picture5](/assets/images/NativeVA/1Picture5.gif)
+
+6. Now we need to train the BOT to start using modified Intent. 
+
+* Click on **NLU Engine**
+* Select the **Engine** option: Mindmeld (Other options: RASA -BETA, Swiftmatch)
+* Click **Update**
+* Click on **Train BOT** on the right top corner and provide a comment like "test".
+* Status next to **Training data** would show **Training** and then switch to **Trained**
+* Click **Make Live**
+
+![1Picture6](/assets/images/NativeVA/1Picture6.png)
+
+7. **Entities** are the variables that bot uses store the collected information form the users. For example:  you can see the Entities with name **preferred appointment data** with Entity type as **Day.**
+
+![1Picture7](/assets/images/NativeVA/1Picture7.png)
+
+
+* To add the **Entities** to the **training phrases,** go back to **Intents** and select **Book appointment** intent.
+
+![1Picture8](/assets/images/NativeVA/1Picture8.png)
+
+* Add utterance with text “I want to see the doctor on the weekend”.
+
+![1Picture9](/assets/images/NativeVA/1Picture9.png)
+
+* Scroll down on utterances and Looking at your just added utterance you can see that **weekend** is marked with different color.
+
+* System automatically detect it as the **time** and configure as the **Entity.**
+
+![1Picture10](/assets/images/NativeVA/1Picture10.png)
+
+* If you want manually to specify any part of the **utterance** as the **parameter**, you can highlight it and option will **popup** to select the entity from the available list. 
+
+* Review the video below, no need to update.
+
+![1Picture11](/assets/images/NativeVA/1Picture11.gif)
+
+* The **Response modules** has the template configures. 
+
+* There are some Default templates that you can customize but cannot delete or rename.
+* There are also custom templates that you can add to the list.
+* The response can be delivered over multiple channels and on this module you can configure if this should be for Voice or/and any available Digital Channel.
+* On the right side you can see the response types. It could be text, code, audio file, etc.
+
+![1Picture12](/assets/images/NativeVA/1Picture12.png)
+
+* Click on **Welcome message** default response template. 
+* Select Voice Channel.
+* Modify the Text Variant, for example type “How can I assist you?"
+	* Update and Make it Live.
+	* Place the test call to your Channel to test that change was applied.
+
+![new15](/assets/images/NativeVA/New15.gif)
+
+* On the **Testing** module you can test if the phrases will be trigger the **Response Templates** or you need to modify your Intents. 
+
+* For example if you want to test message “Agent” against Response template **Agent handover,** the test will be successful as we have the **Talk to an agent** intent configured properly.
+
+![1Picture14](/assets/images/NativeVA/1Picture14.gif)
+
+* If the **BOT encounter an error**, fallback intent, bad feedback or poor intent configuration you can see the details in the **Curation** module. 
+	* Make a note of count under <b>Fallback</b></li>
+
+	* Click on **Preview** and enter **“Test”**. 
+   * It will trigger response related to the **Fallback Intent** as “test” phrase is not specified in any intent.
+   * You can also **downvote** this response and add **comment.**
+
+
+![1Picture15](/assets/images/NativeVA/1Picture15.png)
+
+* Go back to **Curation module or Refresh**. You should see that **Fallback intent** was detected with count went up by 1, as well as **Downvoted** count incremented. 
+
+
+	* Click on **Fallback** block
+	* Click on **Decrypt**
+
+![1Picture16](/assetsimages/NativeVA/1Picture16.png)
+
+* You should see options to add **“test”** phrase to an **existing Intent, create new intent** for it or just **ignore** this message.
+
+![1Picture21](/assets/images/NativeVA/1Picture21.png)
+
+* For now just ignore it.
+* But for the production environment this is the place where you can improve your agent response by adding or modifying the intents.
+
+![1Picture17](/assets/images/NativeVA/1Picture17.png)
+
+* Under the **Session module** you can find all the **transcript** related to the bot interactions.
+
+![1Picture18](/assets/images/NativeVA/1Picture18.png)
+
+* The History **Module** contains information about your: 
+
+	* Bot trainings with Intent updates as well as the Audit Logs.
+![1Picture19](/assets/images/NativeVA/1Picture19.png)
+
+![1Picture20](/assets/images/NativeVA/1Picture20.png)
+
+![2024-05-20_12h11_44](/assets/images/NativeVA/2024-05-20_12h11_44.png)
