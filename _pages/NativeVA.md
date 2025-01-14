@@ -8,7 +8,7 @@ layout: post
 
 **Webex Connect Bot Builder** is a Cloud AI platform that offers native conversational omni-channel virtual agent service to customers via a Cisco Contact Center AI (CCAI) solution. The CCAI solution orchestrates and automates voice-based and digital interactions with the end users. To use the Webex, Connect Bot Builder, you need to provision the Webex Connect digital services for your organization.
 
-# Task 1. Dashboard overview
+# Dashboard overview
 
 1. From the Control Hub, navigate to **Contact Center > Overview**
 2. On the **Quick Links** section click on **Webex Connect Bot Builder.**
@@ -29,7 +29,7 @@ layout: post
 8. The Help module directs you to the Webex Bot Builder documentation page.
 ![4.5](/assets/images/NativeVA/4.5.png)
 
-# Task 2. Create Task Bot
+# Create Task Bot
 
 Task bots augment the no-code bot-building capabilities of Webex Bot Builder. Task bots enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand. In this lab we would see how to build these Bot to deliver the customer experiences.
 
