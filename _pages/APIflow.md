@@ -1,11 +1,11 @@
 ---
-title: Add PIN check with API request to Flow
+title: API request in the flow
 date: 2024-01-15
 layout: post
 ---
 
-# Send API request from the flow.
-## Task 1. Create Data to query via API
+## API request in the flow
+# Task 1. Create Data to query via API
 
 > Note. This step has to be done in order to create dummy data.
 
@@ -31,7 +31,7 @@ layout: post
 9. Test it with Postman. 
 ![postmanget](../assets/images/APIflow/postmanget.png) 
 
-##Task 2. Add to Flow pin check and your case title
+# Task 2. Add to Flow pin check and your case title
 
 Add the following algorithm to the flow to check details of your case.
 ![wxccflow](../assets/images/APIflow/wxccflow.png) 
