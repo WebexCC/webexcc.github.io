@@ -1,10 +1,10 @@
 ---
-title: API request in the flow
+title: API request in the call flow
 date: 2024-01-15
 layout: post
 ---
 
-## API request in the flow
+## API request in the call flow
 # Task 1. Create Data to query via API
 
 > Note. This step has to be done in order to create dummy data.
