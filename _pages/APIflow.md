@@ -28,7 +28,7 @@ layout: post
 	* Click **Update**  
 ![mockapieditdata](/assets/images/APIflow/mockapieditdata.png) 
 9. Test it with Postman.  
-![postmanget](/assets/images/APIflow/postmanget.png) 
+	![postmanget](/assets/images/APIflow/postmanget.png) 
 
 # Task 2. Add to Flow pin check and your case title
 
@@ -45,5 +45,4 @@ Add the following algorithm to the flow to check details of your case.
 6. CED **Collect PIN** with TTS "If you are calling for the case {{title}}, please enter PIN"
 7. Check Condition **Check PIN** with condition **{{CollectDigits_pincheck.DigitsEntered == pin}}**.   
 ![pincondition](/assets/images/APIflow/pincondition.png). 
-
 8. Play message with good or bad authentication.
