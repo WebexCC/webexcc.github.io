@@ -43,6 +43,6 @@ Add the following algorithm to the flow to check details of your case.
 5. Specify path to variables. Path can be checked with [https://jsonpath.com/](https://jsonpath.com/)
 ![variablepath](/assets/images/APIflow/variablepath.png)
 6. CED **Collect PIN** with TTS "If you are calling for the case {{title}}, please enter PIN"
-7. Check Condition **Check PIN** with condition **{{CollectDigits_pincheck.DigitsEntered == pin}}**.   
+7. Check Condition **Check PIN** with experssion **"{{CollectDigits_pincheck.DigitsEntered == pin}}"**.
 ![pincondition](/assets/images/APIflow/pincondition.png). 
 8. Play message with good or bad authentication.
