@@ -38,7 +38,7 @@ Add the following algorithm to the flow to check details of your case.
 1. Menu. 
 2. CED **Collect caseid**. 
 3. Set Global Variable **caseid** (for Reporting)
-4. Send "HTTP Request". 
+4. Send "HTTP Request".  
 ![apirequest](/assets/images/APIflow/apirequest.png)
 5. Specify path to variables. Path can be checked with [https://jsonpath.com/](https://jsonpath.com/)
 ![variablepath](/assets/images/APIflow/variablepath.png)
