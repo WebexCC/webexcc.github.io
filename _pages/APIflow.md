@@ -25,9 +25,9 @@ layout: post
 8. Click **Data** and edit it.
 	* edit **id** to be with 5 digit 
 	* specify **pin** easily to remember, as it is for the demo
-	* Click **Update**
+	* Click **Update**  
 ![mockapieditdata](/assets/images/APIflow/mockapieditdata.png) 
-9. Test it with Postman. 
+9. Test it with Postman.  
 ![postmanget](/assets/images/APIflow/postmanget.png) 
 
 # Task 2. Add to Flow pin check and your case title
