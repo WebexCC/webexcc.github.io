@@ -46,4 +46,3 @@ Add the following algorithm to the flow to check details of your case.
 7. Check Condition **Check PIN** with experssion like on the screenshot ` {{CollectDigits_pincheck.DigitsEntered == pin}} `.  
 ![pincondition](/assets/images/APIflow/pincondition.png). 
 8. Play message with good or bad authentication.
-``
