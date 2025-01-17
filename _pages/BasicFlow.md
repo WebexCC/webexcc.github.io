@@ -227,7 +227,7 @@ designer.
 11. Publish flow
 12. A finished flow will look something like this:
 
-![flow](./assets/images/BasicFlow/flow.png)
+![flow](/assets/images/BasicFlow/flow.png)
 
 # Create Channels (Entry Point with phone number mapping)
 
