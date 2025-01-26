@@ -215,9 +215,12 @@ once it enters the system. This work will be done from the flow
 designer.
 
 1. Under “Customer Experience” click Flows
-2. Click “Manage Flows” drop down and “Create Flow” – this will launch flow designer
-3. Name your flow to start building it
-4. Drag/drop various options to build your flow & interconnect the pieces to make it work.
+2. Click “Manage Flows” drop down and **“Create Flow”**
+3. Click **"Flow Template"**, select **"Simple Inbound Call to Queue"** and click Next
+3. Name your flow to start building it (ex. CCEPInboundFlow) and click **Create Flow**.
+4. Flow Builder will be opened and you will see new flow.
+![createflow](/assets/images/BasicFlow/createflow.gif) 
+5. Drag/drop various options to build your flow & interconnect the pieces to make it work.
 5. Make sure to configure the objects you drop on a flow.
 6. If using Text to Speech (TTS) on objects, you must have an active TTS connector
 7. During CCEP Trials, a TTS Connector will be provided for the trial
