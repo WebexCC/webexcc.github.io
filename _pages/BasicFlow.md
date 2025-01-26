@@ -31,7 +31,7 @@ Under Management on the left, click users, then in the upper right click
 Manage Users, then click on Manually Add or Modify Users. Follow through
 the prompts as you would normally to add a Wx/WxC user.
 
-![newuser](/assets/images/BasicFlow/newuser.png)
+![newuser](../assets/images/BasicFlow/newuser.png)
 
 When you get to the license/service selection screen for the user, make
 sure they are set with the correct licenses. For WxCC Users, make sure
@@ -72,7 +72,7 @@ you log into Control hub at <https://admin.webex.com> simply navigate to
 Contact Center under the left hand menu under Services. This will bring
 you to the Contact Center Overview landing page.
 
-![contactcenter](/assets/images/BasicFlow/CCconfig.png)
+![contactcenter](../assets/images/BasicFlow/CCconfig.png)
 
 Note about Multimedia Profile
 > 
@@ -218,19 +218,21 @@ designer.
 2. Click “Manage Flows” drop down and **“Create Flow”**
 3. Click **"Flow Template"**, select **"Simple Inbound Call to Queue"** and click Next
 3. Name your flow to start building it (ex. CCEPInboundFlow) and click **Create Flow**.
-4. Flow Builder will be opened and you will see new flow.
-![createflow](/assets/images/BasicFlow/createflow.gif) 
-5. Drag/drop various options to build your flow & interconnect the pieces to make it work.
-5. Make sure to configure the objects you drop on a flow.
-6. If using Text to Speech (TTS) on objects, you must have an active TTS connector
-7. During CCEP Trials, a TTS Connector will be provided for the trial
-8. On any queue contact step, make sure to select a static queue that you created
-9. Feel free to experiment with various flow objects
-10. When completed, make sure to slide “Validation” to on and that you have no flow errors
-11. Publish flow
-12. A finished flow will look something like this:
+4. Flow Builder will be opened and you will see new flow. This Flow will be using TTS (Text to Speach) technology to announce messages.
+![createflow](../assets/images/BasicFlow/createflow.gif) 
+5. To Localize TTS to your county specific language, you will need to check supported languages [here](https://help.webex.com/en-us/article/ntkjqhw/Text-to-Speech-(TTS)-in-Webex-Contact-Center)
+6. Add following Global Variables into the flow: `Global_VoiceName` and `Global_Language` into the flow
+7. Drag Set Variable Node to the flow and assign variables `Global_VoiceName` and `Global_Language` according to your requirement (in example: `Global_VoiceName = en-GB-Colton` and `Global_Language = en-GB`
+8. Select your Incoming Queue in the **Queue** node
+9. **Validate** and **Publish** your flow
+![globalTTSvariable](../assets/images/BasicFlow/globalTTSvariable.gif) 
 
-![flow](/assets/images/BasicFlow/flow.png)
+>Note
+> 1. During CCEP Trials, a TTS Connector will be provided for the trial
+> 2. Feel free to experiment with various flow objects
+
+One of Flow examples that you might get:
+![flow](../assets/images/BasicFlow/flow.png)
 
 # Create Channels (Entry Point with phone number mapping)
 
