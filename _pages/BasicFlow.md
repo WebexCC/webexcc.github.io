@@ -241,17 +241,19 @@ One of Flow examples that you might get:
 Channels (Entry Points) are points where calls enter the CC. A support
 number will point a phone number/DID to the Entry Point
 
-1. Under “Customer Experience” click Channels
-2. Click Create Channel
-3. Name your entry point
+1. Under **Customer Experience** click Channels
+2. Click **Create Channel**
+3. Name your entry point (ex. CCEP)
 4. Describe your entry point
-5. Select Channel Type (Inbound Telephony)
-6. Set Service Level Threshold to 120
-7. Select the Routing Flow you had created earlier in the drop down
-8. Select Music on Hold
-9. Under Support number, press Add
-10. Select Webex Calling Location and Select Support Number. Click check mark
+5. Select **Channel Type** as **Inbound Telephony**
+6. Set **Service Level Threshold** to `120`
+7. Select the **Routing Flow** you had created earlier in the drop down (ex. CCEPInboundFlow)
+8. Select **Version label** as **Latest**
+8. Select **Music on Hold** as `defaultmusic_on_hold.wav`
+9. Under **Support number**, press **Add**
+10. Select **Webex Calling Location** and Select **Support Number**. Click check mark
 11. Click Create
+![createchannel](/assets/images/BasicFlow/createchannel.gif)
 
 # Testing your configuration
 
