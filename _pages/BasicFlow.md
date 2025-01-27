@@ -227,8 +227,7 @@ designer.
 9. **Validate** and **Publish** your flow
 ![globalTTSvariable](/assets/images/BasicFlow/globalTTSvariable.gif) 
 
->Note
->
+Note.
 > 1. During CCEP Trials, a TTS Connector will be provided for the trial
 > 
 > 2. Feel free to experiment with various flow objects
