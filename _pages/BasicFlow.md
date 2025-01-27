@@ -126,13 +126,13 @@ Codes are used for reporting purposes. Create as many as needed. Idle
 codes are for when an agent is not available, and wrap up codes are tied
 to interactions once they are complete.
 
-1. Under “Desktop Experience” click Idle/Wrap-up Codes
-2. Click Create Idle/Wrap-up Code
+1. Under **Desktop Experience** click **Idle/Wrap-up Codes**
+2. Click **Create Idle/Wrap-up Code**
 3. Name the code (i.e. Lunch Break)
 4. Describe the code
-5. If this is your default code, select the button for Make it Default
-6. Select Code type from the drop down box
-7. Click Create
+5. If this is your default code, select the button for Make it **Default**
+6. Select **Code type** from the drop down box
+7. Click **Create**
 8. Repeat as needed
 ![wrapupcode](/assets/images/BasicFlow/wrapupcode.gif)
 
@@ -143,7 +143,7 @@ correct Aux Codes, DN Validation, Outdial, etc. The existing profiles
 are sufficient to begin with. If you wish to make changes to one of the
 existing profiles, follow these steps:
 
-1. Under “Desktop Experience” click Desktop Profiles
+1. Under **Desktop Experience** click **Desktop Profiles**
 2. Click on the profile you wish to modify
 3. Go thru the various tabs and make the changes you wish to adjust
 ![desktopprofile](/assets/images/BasicFlow/desktopprofile.gif)
@@ -154,17 +154,17 @@ existing profiles, follow these steps:
 Teams are groups of agents that can be assigned to a call queue. The
 more complex of an environment may mean more teams.
 
-1. Under “User Management” click Teams
-2. Click Create Team
+1. Under **User Management** click **Teams**
+2. Click **Create Team**
 3. Name your team (i.e. ACME-Anvil-Experts)
 4. Describe your team
 5. Select Parent Site
-6. Make sure to select “Agent Based” radio button – Capacity Based Teams
+6. Make sure to select **Agent Based** radio button – Capacity Based Teams
   are legacy
-7. Select the appropriate skill profile, multimedia profile, and the
+7. Select the appropriate **skill profile**, **Multimedia profile**, and the
   agents who are part of this team (Skill & Multimedia profiles are
   optional and can be assigned directly to agent)
-8. Click Create
+8. Click **Create**
 9. Repeat as needed
 ![createteam](/assets/images/BasicFlow/createteam.gif)
 
@@ -173,21 +173,21 @@ more complex of an environment may mean more teams.
 > NOTE User Intervention Required 
 > This step cannot be completed until the users have activated their Webex accounts. You may need to wait until the user has performed this step.
 
-Log into Control hub, go to Contact Center, click on “Contact Center
-Users” under “User Management”. From here, you can see the status and
+Log into Control hub, go to Contact Center, click on **Contact Center
+Users** under **User Management**. From here, you can see the status and
 contact center status of the user. To use WxCC, the user will need to
 have WxCC enabled. Click on a user - this will bring you into the user
 settings.
 
 Edit each user and change the following settings:
 
-1. Verify Contact Center is set to ON
-2. Site should be Site-1 or appropriate site
-3. Verify the correct Desktop Profile
-4. Verify the correct Multimedia Profile
-5. If using skills, select the appropriate Skill Profile
+1. Verify Contact Center is set to **ON**
+2. **Site** should be **Site-1** or appropriate site
+3. Verify the correct **Desktop Profile**
+4. Verify the correct **Multimedia Profile**
+5. If using skills, select the appropriate **Skill Profile**
 6. Select the appropriate team(s) they will be a part of
-7. Click Save
+7. Click **Save**
 8. Repeat for all users as needed
 ![enablewxccusers](/assets/images/BasicFlow/enablewxccusers.gif)
 
