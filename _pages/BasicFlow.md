@@ -118,6 +118,7 @@ define who gets a call initially, when/if the call is relaxed, etc.
   low skilled, 10 is Expert
 6. Click Create
 7. Repeat as needed
+![skillprofile](/assets/images/BasicFlow/skillprofile.gif)
 
 ### Create Idle/Wrap Up Codes
 
@@ -133,6 +134,7 @@ to interactions once they are complete.
 6. Select Code type from the drop down box
 7. Click Create
 8. Repeat as needed
+![wrapupcode](/assets/images/BasicFlow/wrapupcode.gif)
 
 ### Modify existing Desktop Profile
 
@@ -144,7 +146,10 @@ existing profiles, follow these steps:
 1. Under “Desktop Experience” click Desktop Profiles
 2. Click on the profile you wish to modify
 3. Go thru the various tabs and make the changes you wish to adjust
-4. Create Teams
+![desktopprofile](/assets/images/BasicFlow/desktopprofile.gif)
+
+
+### Create Teams
 
 Teams are groups of agents that can be assigned to a call queue. The
 more complex of an environment may mean more teams.
@@ -161,6 +166,7 @@ more complex of an environment may mean more teams.
   optional and can be assigned directly to agent)
 8. Click Create
 9. Repeat as needed
+![createteam](/assets/images/BasicFlow/createteam.gif)
 
 ### Enable Users for WxCC
 
