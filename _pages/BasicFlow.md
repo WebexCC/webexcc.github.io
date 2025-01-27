@@ -31,7 +31,7 @@ Under Management on the left, click users, then in the upper right click
 Manage Users, then click on Manually Add or Modify Users. Follow through
 the prompts as you would normally to add a Wx/WxC user.
 
-![newuser](../assets/images/BasicFlow/newuser.png)
+![newuser](/assets/images/BasicFlow/newuser.png)
 
 When you get to the license/service selection screen for the user, make
 sure they are set with the correct licenses. For WxCC Users, make sure
@@ -106,6 +106,7 @@ define who gets a call initially, when/if the call is relaxed, etc.
 6. Service Level Threshold is not necessary, but feel free to set it to any value for reporting
 7. Click Create
 8. Repeat as needed
+![skilldefinition](/assets/images/BasicFlow/skilldefinition.gif)
 
 ### Skill Profile
 
