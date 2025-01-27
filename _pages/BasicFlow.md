@@ -223,7 +223,7 @@ designer.
 6. **Validate** and **Publish** your flow
 ![createflow](/assets/images/BasicFlow/createflow.gif) 
 
-# How to change Localization of Text to Speach (TTS) service
+# Localization change of Text to Speach (TTS) service
 
 To Localize TTS to your county specific language, you will need to check supported languages [here](https://help.webex.com/en-us/article/ntkjqhw/Text-to-Speech-(TTS)-in-Webex-Contact-Center)
 
