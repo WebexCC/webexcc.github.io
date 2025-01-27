@@ -221,7 +221,7 @@ designer.
 4. Flow Builder will be opened and you will see new flow. This Flow will be using TTS (Text to Speach) technology to announce messages.
 5. Select your Incoming Queue in the **Queue** node
 6. **Validate** and **Publish** your flow
-![createflow](/assets/images/BasicFlow/createflow.gif) 
+![createflow](/assets/images/BasicFlow/createflow1.gif) 
 
 # Localization change of Text to Speach (TTS) service
 
@@ -231,7 +231,7 @@ To Localize TTS to your county specific language, you will need to check support
 2. Drag Set Variable Node to the flow and assign variables `Global_VoiceName` and `Global_Language` according to your requirement (in example: `Global_VoiceName = en-GB-Colton` and `Global_Language = en-GB`
 3. Select your Incoming Queue in the **Queue** node
 4. **Validate** and **Publish** your flow
-![globalTTSvariable](/assets/images/BasicFlow/globalTTSvariable.gif) 
+![globalTTSvariable](/assets/images/BasicFlow/globalTTSvariable1.gif) 
 
 >Note
 >
