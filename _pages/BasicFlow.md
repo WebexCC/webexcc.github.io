@@ -189,6 +189,8 @@ Edit each user and change the following settings:
 6. Select the appropriate team(s) they will be a part of
 7. Click Save
 8. Repeat for all users as needed
+![enablewxccusers](/assets/images/BasicFlow/enablewxccusers.gif)
+
 
 # Create a Queue
 
@@ -197,23 +199,25 @@ answered by an available agent. Calls can be routed either by Longest
 Available Agent, or Skills Based. 
 > Queue Routing Type cannot be changed once a queue is created. If you need to adjust the type later, you will need to create a new queue.
 
-1. Under “Customer Experience” click Queues
-2. Click Create Queue
+1. Under **Customer Experience** click **Queues**
+2. Click **Create Queue**
 3. Name your queue
 4. Describe your queue
-5. Select Queue Type (Inbound Queue)
-6. Select the channel type (Telephony)
+5. Select Queue Type **Inbound Queue**
+6. Select the channel type **Telephony**
 7. For Queue Routing Type select Skills Based or Longest Available Agent
-8. If SBR, for Agent Selection select Best Available Agent or Agent available longest
-9. Add groups of agents by clicking Create Group
-10. Select Team(s) to participate in then press save
-11. Select options from advanced settings.
-12. Permit monitoring (supervisor monitoring)
-13. Service Level Threshold can be set to 120
-14. Max Time in Queue can be set to 86400
-15. Default Music must be set
-16. Click Create
-17. Repeat as needed
+> If SBR, for Agent Selection select Best Available Agent or Agent available longest
+8. Add groups of agents by clicking **Create Group**
+9. Select Team(s) to participate in then press save
+10. Select options from advanced settings.
+11. Permit **Service monitoring** for supervisor monitoring
+12. Service Level Threshold can be set to `120`
+13. Max Time in Queue can be set to `86400`
+14. Default Music on Hold set to `defaultmusic_on_hold.wav`
+15. Click Create
+16. Repeat as needed
+![createqueue](/assets/images/BasicFlow/createqueue.gif)
+
 
 # Create a Flow
 
