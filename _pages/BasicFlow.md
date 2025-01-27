@@ -274,8 +274,9 @@ number will point a phone number/DID to the Entry Point
 
 # Testing your configuration
 
-1. Log your agent into the WxCC Agent Desktop
-  <https://desktop.wxcc-us1.cisco.com/>
+1. Log your agent into the WxCC Agent Desktop according to the location of your tennant:
+  US based tennant: <https://desktop.wxcc-us1.cisco.com/>
+  EU based tennant: <https://desktop.wxcc-eu1.cisco.com/>
 2. Select the correct extension/phone number and team from Station
   Credentials
 3. Once logged in, change status to “Available” (Green)
