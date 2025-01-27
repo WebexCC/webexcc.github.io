@@ -31,7 +31,7 @@ Under Management on the left, click users, then in the upper right click
 Manage Users, then click on Manually Add or Modify Users. Follow through
 the prompts as you would normally to add a Wx/WxC user.
 
-![newuser](/assets/images/BasicFlow/newuser.png)
+![newuser](../assets/images/BasicFlow/newuser.png)
 
 When you get to the license/service selection screen for the user, make
 sure they are set with the correct licenses. For WxCC Users, make sure
@@ -219,15 +219,22 @@ designer.
 3. Click **"Flow Template"**, select **"Simple Inbound Call to Queue"** and click Next
 3. Name your flow to start building it (ex. CCEPInboundFlow) and click **Create Flow**.
 4. Flow Builder will be opened and you will see new flow. This Flow will be using TTS (Text to Speach) technology to announce messages.
+5. Select your Incoming Queue in the **Queue** node
+6. **Validate** and **Publish** your flow
 ![createflow](/assets/images/BasicFlow/createflow.gif) 
-5. To Localize TTS to your county specific language, you will need to check supported languages [here](https://help.webex.com/en-us/article/ntkjqhw/Text-to-Speech-(TTS)-in-Webex-Contact-Center)
-6. Add following Global Variables into the flow: `Global_VoiceName` and `Global_Language` into the flow
-7. Drag Set Variable Node to the flow and assign variables `Global_VoiceName` and `Global_Language` according to your requirement (in example: `Global_VoiceName = en-GB-Colton` and `Global_Language = en-GB`
-8. Select your Incoming Queue in the **Queue** node
-9. **Validate** and **Publish** your flow
+
+# How to change Localization of Text to Speach (TTS) service
+
+To Localize TTS to your county specific language, you will need to check supported languages [here](https://help.webex.com/en-us/article/ntkjqhw/Text-to-Speech-(TTS)-in-Webex-Contact-Center)
+
+1. Add following Global Variables into the flow: `Global_VoiceName` and `Global_Language` into the flow
+2. Drag Set Variable Node to the flow and assign variables `Global_VoiceName` and `Global_Language` according to your requirement (in example: `Global_VoiceName = en-GB-Colton` and `Global_Language = en-GB`
+3. Select your Incoming Queue in the **Queue** node
+4. **Validate** and **Publish** your flow
 ![globalTTSvariable](/assets/images/BasicFlow/globalTTSvariable.gif) 
 
-Note.
+>Note
+>
 > 1. During CCEP Trials, a TTS Connector will be provided for the trial
 > 
 > 2. Feel free to experiment with various flow objects
