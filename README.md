@@ -17,6 +17,8 @@ Detailed explanation and configuration steps can be reviewed on <https://webexcc
 |   2    | [Enable Customer Journey Data Services (CJDS)](/pages/JDS/) |
 |   3    |      [Webex Virtual Assistance bot](/pages/NativeVA/)       |
 |   4    |       [API request in the call flow](/pages/APIflow)        |
-<!--|   5    |        [Pebble Playground](/pages/Pebbleplayground)         | -->
+|   5    |        [Pebble Playground](/pages/Pebbleplayground)         | 
+
+
 
 <center><img src="/assets/gitbook/images/ccep.png" width="100"></center>
