@@ -81,3 +81,13 @@ Returns the number of days between now and a given date.
 Returns the number of Ms between now and a given date.
 
 <img src="/assets/images/Pebbleplayground/msbetweendate.png" height="400" />
+
+<!-- {%raw%} -->
+
+{{ now() | epoch(inMillis=true) % 10 }}
+
+<!-- {%endraw%} -->
+
+Returns a single digit number that seems random. Behind the scenes, we are divifing our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly.
+
+<img src="../assets/images/Pebbleplayground/randnum.png" height="400" />
