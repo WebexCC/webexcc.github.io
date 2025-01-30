@@ -84,7 +84,7 @@ Returns the number of Ms between now and a given date.
 
 <!-- {%raw%} -->
 
-**'{{ now() | epoch(inMillis=true) % 10 }}'**
+**`{{ now() | epoch(inMillis=true) % 10 }}`**
 
 <!-- {%endraw%} -->
 
