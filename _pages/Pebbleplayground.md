@@ -11,7 +11,7 @@ layout: post
 # Time Expressions
 
 This section contains time related expressions and functions, useful for processing hold times, days of week, etc.
-
+<!--
 `{{Now}}`
 
 Returns the current date and time
@@ -53,3 +53,4 @@ Returns the number of days between now and a given date.
 Returns the number of Ms between now and a given date.
 
 ![Ms Between Now and date](../assets/images/Pebbleplayground/msbetweendate.png)
+-->
