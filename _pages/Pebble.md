@@ -16,7 +16,7 @@ This section contains time related expressions and functions, useful for process
 
 Returns the current date and time
 
-![Now()](../assets/images/Pebbleplayground/now.png)
+![Now()](/assets/images/Pebbleplayground/now.png)
 
 `{{now()|epoch}}`
 
