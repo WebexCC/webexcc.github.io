@@ -11,8 +11,9 @@ layout: post
 # Time Expressions
 
 This section contains time related expressions and functions, useful for processing hold times, days of week, etc.
-
-<textarea readonly="">{{now()}}</textarea>
+<!-- {%raw%} -->
+{{now()}}
+<!-- {%endraw%} -->
 
 Returns the current date and time.
 
