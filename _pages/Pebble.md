@@ -88,6 +88,6 @@ Returns the number of Ms between now and a given date.
 
 <!-- {%endraw%} -->
 
-Returns a single digit number that seems random. Behind the scenes, we are divifing our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly.
+Returns a single digit number that seems random. Behind the scenes, we are using the modulus operator to divide our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly.
 
 <img src="../assets/images/Pebbleplayground/randnum.png" height="400" />
