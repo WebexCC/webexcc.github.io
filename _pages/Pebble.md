@@ -12,7 +12,7 @@ layout: post
 
 This section contains time related expressions and functions, useful for processing hold times, days of week, etc.
 
-`Now`
+> {{Now()}}
 
 Returns the current date and time
 
