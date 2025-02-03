@@ -91,3 +91,13 @@ Returns the number of Ms between now and a given date.
 Returns a single digit number that seems random. Behind the scenes, we are using the modulus operator to divide our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly, Burning the same 10 seconds of Cisco Opus into a callers mind, driving them insane in the process.
 
 <img src="/assets/images/Pebbleplayground/randnum.png" height="400" />
+
+<!-- {%raw%} -->
+
+**'{{now() |epoch() - QTime > VMTimeout}}'**
+
+<!-- {%endraw%} -->
+
+QTime should be a variable set right after the queue contact node in the flow using a simple now() Epoch. VMTimeout is an integer that can be loaded from a global variable. The above statement will allow you to evaluate true or false if a person has been queueing longer than the specified VM Timeout.
+
+<img src="/assets/images/Pebbleplayground/Vmtimeout.png" height="400" />
