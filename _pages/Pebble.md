@@ -94,7 +94,7 @@ Returns a single digit number that seems random. Behind the scenes, we are using
 
 <!-- {%raw%} -->
 
-**'{{now() |epoch() - QTime > VMTimeout}}'**
+**`{{now() |epoch() - QTime > VMTimeout}}`**
 
 <!-- {%endraw%} -->
 
