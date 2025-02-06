@@ -58,13 +58,13 @@ Returns the name of the current day of the week.
 
 <!-- {%raw%} -->
 
-Expression: **`{{ now() | epoch(inMillis=true) | date("EEEE") }} `**
+Expression: **`{{ now() | epoch(inMillis=true) | date("EEEE") }}`**
 
 Result: **`Thursday`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/currentday.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/currentday.png" height="400" />
 
 ## Tomorrow's Day of Week
 
