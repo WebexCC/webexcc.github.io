@@ -86,7 +86,7 @@ Returns the number of Ms between now and a given date.
 
 **`{{now() | epoch(inMillis=true) % 10}}`**
 Or
-**'{{(((now() | epoch(inMillis=true)) % 1000 / 1000.0) * (180 - 90) + 90) | numberformat("#")}} '**
+**`{{(((now() | epoch(inMillis=true)) % 1000 / 1000.0) * (180 - 90) + 90) | numberformat("#")}}`**
 
 <!-- {%endraw%} -->
 
