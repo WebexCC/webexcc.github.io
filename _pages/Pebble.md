@@ -18,11 +18,11 @@ Return the current date and time.
 
 Expression: **`{{ now() }}`**
 
-Result: **`2025-01-30T12:42:45.760Z[UTC]`**
+Result: **`2025-02-06T21:09:02.712Z[UTC]`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/now.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/now.png" height="400" />
 
 ## Epoch (Seconds since January 1, 2970 12:00am)
 
@@ -142,7 +142,7 @@ QTime should be a variable set right after the queue contact node in the flow us
 
 <!-- {%raw%} -->
 
-Expression: **`{{ now() |epoch - QTime > VMTimeout }}`**
+Expression: **`{{ now() | epoch - QTime > VMTimeout }}`**
 
 Result: **`true`**
 
