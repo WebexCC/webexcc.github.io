@@ -76,7 +76,6 @@ Returns the number of days between now and a given date.
 <img src="/assets/images/Pebbleplayground/daysbetween.png" height="400" />
 
 <!-- {%raw%} -->
-
 Expression: **`{{ now() | epoch(inMillis=true) - "October 1, 2023 00:00" | epoch(inMillis=true, format="MMMM d, yyyy HH:mm") }}`**
 
 Result: **`42753373824`**
