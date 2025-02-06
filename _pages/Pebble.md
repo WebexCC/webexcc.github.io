@@ -36,7 +36,7 @@ Result: **`1738241101`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/NowEpoch.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/NowEpoch.png" height="400" />
 
 ## Epoch for Static Date and Time
 
