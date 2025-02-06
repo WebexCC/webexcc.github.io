@@ -34,7 +34,7 @@ Returns the current date and time in epoch format.
 
 <!-- {%raw%} -->
 
-**`{{now() | date("EEEE", existingFormat="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")}}`**
+**`{{ now() | epoch(inMillis=true) | date("EEEE") }} `**
 
 <!-- {%endraw%} -->
 
@@ -54,7 +54,7 @@ Returns the name of tomorrow.
 
 <!-- {%raw%} -->
 
-**`{{ "December 10, 2023" | date("MM-dd-yyyy HH:mm:ss", existingFormat="MMMM dd, yyyy") | epoch(format='MM-dd-yyyy HH:mm:ss')}}`**
+**`{{ "December 10, 2023 00:00" | epoch(format="MMMM dd, yyyy HH:mm") }}`**
 
 <!-- {%endraw%} -->
 
@@ -85,10 +85,12 @@ Returns the number of Ms between now and a given date.
 <!-- {%raw%} -->
 
 **`{{now() | epoch(inMillis=true) % 10}}`**
+Or
+**'{{(((now() | epoch(inMillis=true)) % 1000 / 1000.0) * (180 - 90) + 90) | numberformat("#")}} '**
 
 <!-- {%endraw%} -->
 
-Returns a single digit number that seems random. Behind the scenes, we are using the modulus operator to divide our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly, Burning the same 10 seconds of Cisco Opus into a callers mind, driving them insane in the process.
+Returns a single digit number that seems random. Behind the scenes, we are using the modulus operator to divide our Epoch in Ms by 10 and return the remainder. Use 100 for a 2 digit number, and 1000 for a 3 digit number and so on. The second statement returns a random number between 90 and 180.Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly, Burning the same 10 seconds of Cisco Opus into a callers mind, driving them insane in the process.
 
 <img src="/assets/images/Pebbleplayground/randnum.png" height="400" />
 
