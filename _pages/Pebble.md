@@ -32,7 +32,7 @@ Returns the current date and time in epoch format.
 
 Expression: **`{{ now() | epoch }}`**
 
-Result: **`1738241101`**
+Result: **`1738876452`**
 
 <!-- {%endraw%} -->
 
@@ -50,7 +50,7 @@ Result: **`1702166400`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/epochofdate.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/epochofdate.png" height="400" />
 
 ## Day of Week
 
