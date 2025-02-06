@@ -171,4 +171,4 @@ Once JDS is set up and configured, we recommend using the [JDS Contact resolver 
 
 There is a great [postman collection](https://github.com/WebexSamples/webex-contact-center-api-samples/tree/main/customer-journey-samples/cjds-postman-example) available that gives many API's that you can use to show examples of overdue payment notifications in WxCC Agent desktop. You will need to set up postman with the relevant OAuth token using [this guide.](https://app.vidcast.io/share/6b54f08d-0cd2-481f-979b-c8643c1d6a13)
 
-![Overdue Payment Notification](../assets/images/JDS/JDSPayments.png)
+![Overdue Payment Notification](/assets/images/JDS/JDSPayments.png)
