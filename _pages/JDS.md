@@ -167,7 +167,7 @@ The `progressive profile` allows for alignment of different phone numbers and em
 
 ![JDSWidgetDesktop](/assets/images/JDS/jds_desktop_widget.gif)
 
-Once JDS is set up and configured, we recommend using the [JDS Contact resolver subflow](https://github.com/TeamCCEP/JDSContactResolver) to retrieve customer details into variables in existing flows. This allows you to do things like greet callers by name, channel switch to Email, SMS etc, and a variety of other activities based around knowing your customer.
+Once JDS is set up and configured, we recommend using the <a href="https://github.com/TeamCCEP/JDSContactResolver" target="_blank">contact resolver subflow</a> to retrieve customer details into variables in existing flows. This allows you to do things like greet callers by name, channel switch to Email, SMS etc, and a variety of other activities based around knowing your customer.
 
 There is a great <a href="https://github.com/WebexSamples/webex-contact-center-api-samples/tree/main/customer-journey-samples/cjds-postman-example" target="_blank">Postman Collection</a> available that gives many API's that you can use to show examples of overdue payment notifications in WxCC Agent desktop. You will need to set up postman with the relevant OAuth token using <a href="https://app.vidcast.io/share/6b54f08d-0cd2-481f-979b-c8643c1d6a13" target="_blank">this guide</a>
 
