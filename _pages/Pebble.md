@@ -4,21 +4,19 @@ date: 2025-01-30
 layout: post
 ---
 
-## Pebble Playground
-
 **Pebble Playground** is a collection of useful pebble expressions for use in Webex Contact Centre flows.
 
-# Time Expressions
+# Working with Dates and Time
 
 This section contains time related expressions and functions, useful for processing hold times, days of week, etc.
 
+## Current Date and Time
+Return the current date and time.
+
 <!-- {%raw%} -->
-
-**`{{now()}}`**
-
+Expression: **`{{ now() }}`**
+Result: **`2025-01-30T12:42:45.760Z[UTC]`**
 <!-- {%endraw%} -->
-
-Returns the current date and time.
 
 <img src="/assets/images/Pebbleplayground/now.png" height="400" />
 
