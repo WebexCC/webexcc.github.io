@@ -4,8 +4,6 @@ date: 2025-01-09
 layout: post
 ---
 
-# Customer Journey Data Services (CJDS)
-
 > `Note:` Please refer to [Webex CC Labs](https://webexcc.github.io/pages/JDS_XM/#customer-journey-data-services-cjds) for better understanding of CJDS feature in Webex Contact Center.
 
 ### Quick Links
@@ -14,6 +12,14 @@ layout: post
 > Portal: **[https://portal.wxcc-us1.cisco.com/](https://portal.wxcc-us1.cisco.com/){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 > Developer Portal: **[https://developer.webex-cx.com/documentation/getting-started](https://developer.webex-cx.com/documentation/getting-started){:target="\_blank"}**
+
+> Feature Overview: [https://app.vidcast.io/share/889c2cbf-51b2-4cc9-94f8-9143078dca83](https://app.vidcast.io/share/889c2cbf-51b2-4cc9-94f8-9143078dca83){:target="\_blank"}
+> Example Use Case: [https://app.vidcast.io/share/b90e50f4-d085-416c-9aae-29426fa18f53](https://app.vidcast.io/share/b90e50f4-d085-416c-9aae-29426fa18f53){:target="\_blank"}
+> Readme: [https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README_VERSION_10.0.0.md](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README_VERSION_10.0.0.md){:target="\_blank"}
+> JDS API Reference: [https://developer.webex-cx.com/documentation/journey](https://developer.webex-cx.com/documentation/journey){:target="\_blank"}
+> Adding Identities: [https://app.vidcast.io/share/4c4a5909-7770-4662-b25e-2f31b34f9c63](https://app.vidcast.io/share/4c4a5909-7770-4662-b25e-2f31b34f9c63){:target="\_blank"}
+> JDS Contact Resolver Subflow: [https://app.vidcast.io/share/cab5b686-9745-4394-98d4-b8b58c45f1a3](https://app.vidcast.io/share/cab5b686-9745-4394-98d4-b8b58c45f1a3){:target="\_blank"}
+> Oauth Token Creation for Postman:[ https://app.vidcast.io/share/6b54f08d-0cd2-481f-979b-c8643c1d6a13](https://app.vidcast.io/share/6b54f08d-0cd2-481f-979b-c8643c1d6a13){:target="\_blank"}
 
 ## JDS Feature Overview
 
