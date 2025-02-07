@@ -74,11 +74,11 @@ Returns the name of the day of the week for tomorrow.
 
 Expression: **`{{ (now() | epoch(inMillis=true) + 86400000) | date("EEEE") }}`**
 
-Result: **`Friday`**
+Result: **`Saturday`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/Tomorrow.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/Tomorrow.png" height="400" />
 
 ## Elapsed Days
 
