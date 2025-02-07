@@ -106,7 +106,7 @@ Result: **`42753373824`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/msbetweendate.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/msbetweendate.png" height="400" />
 
 ## Pseudo-Random Numbers
 
