@@ -102,7 +102,7 @@ Returns the number of Ms between now and a given date.
 
 Expression: **`{{ now() | epoch(inMillis=true) - "October 1, 2023 00:00" | epoch(inMillis=true, format="MMMM d, yyyy HH:mm") }}`**
 
-Result: **`42753373824`**
+Result: **`42817072377`**
 
 <!-- {%endraw%} -->
 
