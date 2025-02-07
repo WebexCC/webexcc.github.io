@@ -150,4 +150,4 @@ Result: **`true`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/Vmtimeout.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/Vmtimeout.png" height="400" />
