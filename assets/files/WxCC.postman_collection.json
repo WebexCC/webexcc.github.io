@@ -1,0 +1,3679 @@
+{
+	"info": {
+		"_postman_id": "ad4e69c0-9775-4bc6-81ab-d58304024256",
+		"name": "KVWL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15314799"
+	},
+	"item": [
+		{
+			"name": "Contact Centre APIs",
+			"item": [
+				{
+					"name": "Pause Recording",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/v1/tasks/c568d621-9da0-458e-ac34-44f0cf2267a9/record/pause",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"c568d621-9da0-458e-ac34-44f0cf2267a9",
+								"record",
+								"pause"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  #SIMPLE: Simply retrieve all task IDs\n\n  task(\n    #Search all tasks in a 15 day window.\n    from: 1702630800000\n    to: 1702646574928\n  ) {\n    tasks {\n      #Return the ID of the task\n      id\n    origin\n      destination\n      lastWrapupCodeName\n      booleanGlobalVariables(name: \"SaveRecording\"){\n          name\n          value\n      }\n      }\n      #You can add more fields below\n    }\n  }\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/search?orgId=77dbece8-9e08-4e32-acd2-2f1a89c50d9a",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1702630800000",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "1702646574928",
+									"disabled": true
+								},
+								{
+									"key": "orgId",
+									"value": "77dbece8-9e08-4e32-acd2-2f1a89c50d9a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Tasks Jun2024",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  #SIMPLE: Simply retrieve all task IDs\n\n  task(\n    #Search all tasks in a 15 day window.\n    from: 1718834400000\n    to: 1719491847592\n  ) {\n    tasks {\n      #Return the ID of the task\n      id\n    origin\n      destination\n      lastWrapupCodeName\n      booleanGlobalVariables(name: \"SaveRecording\"){\n          name\n          value\n      }\n      }\n      #You can add more fields below\n    }\n  }\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/search?orgId=77dbece8-9e08-4e32-acd2-2f1a89c50d9a",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1702630800000",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "1702646574928",
+									"disabled": true
+								},
+								{
+									"key": "orgId",
+									"value": "77dbece8-9e08-4e32-acd2-2f1a89c50d9a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WXCC Get Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/v1/tasks?orgId=77dbece8-9e08-4e32-acd2-2f1a89c50d9a&from=1702630800000&to=1702646574928",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "orgId",
+									"value": "77dbece8-9e08-4e32-acd2-2f1a89c50d9a"
+								},
+								{
+									"key": "from",
+									"value": "1702630800000"
+								},
+								{
+									"key": "to",
+									"value": "1702646574928"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSMSInteraction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"query\": {\n          \"orgId\": \"{{org_idJDS}}\",\n          \"urlExpiration\": 30,\n          \"taskIds\": [\n               \"b07b8075-d58c-454a-965e-add7a10cb6a6\"\n          ],\n          \"includeSegments\": false\n     }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/v1/captures/query",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"v1",
+								"captures",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAmazonSMSInteraction",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cjp-ccone-produs1-media-storage-recording.s3.amazonaws.com/%2Fdigital/dynamic/b07b8075-d58c-454a-965e-add7a10cb6a6/smsTranscript.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240627T123845Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=AKIATRZUOXQOKWHH6JML%2F20240627%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=af8929d7054b93677efe400a795d55aa53b77724eee2cee7ae9dbb738dc19b32",
+							"protocol": "https",
+							"host": [
+								"cjp-ccone-produs1-media-storage-recording",
+								"s3",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"%2Fdigital",
+								"dynamic",
+								"b07b8075-d58c-454a-965e-add7a10cb6a6",
+								"smsTranscript.json"
+							],
+							"query": [
+								{
+									"key": "X-Amz-Algorithm",
+									"value": "AWS4-HMAC-SHA256"
+								},
+								{
+									"key": "X-Amz-Date",
+									"value": "20240627T123845Z"
+								},
+								{
+									"key": "X-Amz-SignedHeaders",
+									"value": "host"
+								},
+								{
+									"key": "X-Amz-Expires",
+									"value": "1800"
+								},
+								{
+									"key": "X-Amz-Credential",
+									"value": "AKIATRZUOXQOKWHH6JML%2F20240627%2Fus-east-1%2Fs3%2Faws4_request"
+								},
+								{
+									"key": "X-Amz-Signature",
+									"value": "af8929d7054b93677efe400a795d55aa53b77724eee2cee7ae9dbb738dc19b32"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NOT WORKING Upload Audio Prompt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"audioFileInfo\": {\n          \"organizationId\": \"{{org_idJDS}}\",\n          \"id\": \"\",\n          \"version\": 0,\n          \"name\": \"Newgreeting.wav\",\n          \"contentType\": \"AUDIO_WAV\",\n          \"blobId\": \"\",\n          \"url\": \"\",\n          \"description\": \"New Test Audio Prompt\",\n          \"systemDefault\": false,\n          \"createdTime\": 0,\n          \"lastUpdatedTime\": 0\n     }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/organization/{{org_idJDS}}/audio-file",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"organization",
+								"{{org_idJDS}}",
+								"audio-file"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calling",
+			"item": [
+				{
+					"name": "Reporting",
+					"item": [
+						{
+							"name": "List Reports",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://webexapis.com/v1/report/templates",
+									"protocol": "https",
+									"host": [
+										"webexapis",
+										"com"
+									],
+									"path": [
+										"v1",
+										"report",
+										"templates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detailed Call history Example",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"templateId\":500,\n    \"startDate\": \"2023-10-08\",\n    \"endDate\": \"2023-11-07\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://webexapis.com/v1/reports",
+									"protocol": "https",
+									"host": [
+										"webexapis",
+										"com"
+									],
+									"path": [
+										"v1",
+										"reports"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Power Consumption",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"templateId\":412,\n    \"startDate\": \"2024-03-05\",\n    \"endDate\": \"2024-03-07\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://webexapis.com/v1/reports",
+									"protocol": "https",
+									"host": [
+										"webexapis",
+										"com"
+									],
+									"path": [
+										"v1",
+										"reports"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download Report",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reportdownload-a.webex.com/api?reportId=Y2lzY29zcGFyazovL3VzL1JFUE9SVC9kZTkzYjBhYjYzNjc0YjM1OGIwZTNlODg3NzkwY2UwNw",
+									"protocol": "https",
+									"host": [
+										"reportdownload-a",
+										"webex",
+										"com"
+									],
+									"path": [
+										"api"
+									],
+									"query": [
+										{
+											"key": "reportId",
+											"value": "Y2lzY29zcGFyazovL3VzL1JFUE9SVC9kZTkzYjBhYjYzNjc0YjM1OGIwZTNlODg3NzkwY2UwNw"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Report Details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://webexapis.com/v1/reports?reportId=Y2lzY29zcGFyazovL3VzL1JFUE9SVC9kZTkzYjBhYjYzNjc0YjM1OGIwZTNlODg3NzkwY2UwNw",
+									"protocol": "https",
+									"host": [
+										"webexapis",
+										"com"
+									],
+									"path": [
+										"v1",
+										"reports"
+									],
+									"query": [
+										{
+											"key": "reportId",
+											"value": "Y2lzY29zcGFyazovL3VzL1JFUE9SVC9kZTkzYjBhYjYzNjc0YjM1OGIwZTNlODg3NzkwY2UwNw"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/locations",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/devices",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "authUrl",
+						"value": "https://webexapis.com/v1/authorize?client_id=C470f238d6fa205559e57b2d650e0f29f1bab3e0134c74e19e004c34eb0124479&response_type=code&redirect_uri=https%3A%2F%2Fadmin.webex.com&scope=spark-admin%3Abroadworks_subscribers_write%20meeting%3Aadmin_participants_read%20spark%3Apeople_write%20spark-admin%3Awholesale_customers_write%20spark-admin%3Aworkspace_metrics_read%20spark-admin%3Awholesale_billing_reports_read%20spark%3Aplaces_read%20spark-admin%3Avideo_mesh_api_webhook_write%20meeting%3Aadmin_config_write%20spark-compliance%3Amessages_read%20spark-admin%3Aworkspaces_write%20spark-compliance%3Ameetings_write%20spark-admin%3Alocations_write%20meeting%3Aadmin_schedule_write%20identity%3Aplaceonetimepassword_create%20spark-admin%3Aorganizations_write%20spark%3Adevices_write%20spark-admin%3Awholesale_sub_partners_write%20spark-admin%3Abroadworks_billing_reports_write%20spark-admin%3Acall_qualities_read%20spark%3Akms%20spark-admin%3Awholesale_sub_partners_read%20spark%3Awebrtc_calling%20spark-admin%3Awholesale_subscribers_read%20meeting%3Aadmin_config_read%20spark%3Atelephony_config_write%20meeting%3Aparticipants_read%20Identity%3Acontact%20spark-admin%3Awholesale_billing_reports_write%20spark-admin%3Avideo_mesh_api_read%20spark-admin%3Aorganizations_read%20spark-compliance%3Awebhooks_write%20meeting%3Aschedules_write%20spark-compliance%3Ateam_memberships_read%20spark-admin%3Avideo_mesh_api_write%20spark-admin%3Adevices_read%20spark-admin%3Atelephony_config_write%20spark-admin%3Abroadworks_enterprises_read%20spark%3Acalls_read%20meeting%3Arecordings_write%20spark%3Adevices_read%20spark-admin%3Aresource_group_memberships_read%20spark-compliance%3Aevents_read%20spark-admin%3Aresource_group_memberships_write%20spark-admin%3Ahybrid_connectors_read%20spark-compliance%3Ateams_read%20spark-admin%3Aplaces_write%20spark-admin%3Alicenses_read%20spark%3Aplaces_write%20meeting%3Aadmin_preferences_write%20spark%3Aall%20meeting%3Aadmin_preferences_read%20analytics%3Aread_all%20spark-admin%3Apeople_write%20spark%3Aorganizations_read%20spark-admin%3Aplaces_read%20spark-compliance%3Ateam_memberships_write%20identity%3Agroups_read%20identity%3Atokens_read%20spark-admin%3Adevices_write%20spark%3Acalls_write%20Identity%3Aone_time_password%20spark-admin%3Aworkspace_locations_read%20spark%3Axapi_commands%20spark-compliance%3Awebhooks_read%20spark-compliance%3Amessages_write%20spark-admin%3Awholesale_customers_read%20meeting%3Aparticipants_write%20meeting%3Aadmin_transcripts_read%20spark-admin%3Apeople_read%20spark-compliance%3Amemberships_read%20spark-admin%3Aresource_groups_read%20meeting%3Arecordings_read%20spark-admin%3Alocations_read%20meeting%3Apreferences_write%20meeting%3Aadmin_recordings_read%20meeting%3Atranscripts_read%20identity%3Atokens_write%20spark%3Axapi_statuses%20spark-admin%3Awholesale_subscribers_write%20spark-admin%3Acalling_cdr_read%20spark-admin%3Ahybrid_clusters_read%20meeting%3Acontrols_read%20spark-admin%3Aworkspace_locations_write%20spark-admin%3Atelephony_config_read%20spark-admin%3Abroadworks_billing_reports_read%20meeting%3Aadmin_schedule_read%20spark-admin%3Abroadworks_enterprises_write%20meeting%3Aschedules_read%20spark-compliance%3Amemberships_write%20spark-admin%3Aroles_read%20meeting%3Apreferences_read%20spark-compliance%3Ameetings_read%20spark-admin%3Aworkspaces_read%20spark%3Atelephony_config_read%20spark-compliance%3Arooms_read%20spark-admin%3Abroadworks_subscribers_read%20identity%3Agroups_rw%20meeting%3Acontrols_write%20meeting%3Aadmin_recordings_write%20audit%3Aevents_read%20spark-compliance%3Arooms_write&state=set_state_here",
+						"type": "string"
+					},
+					{
+						"key": "clientSecret",
+						"value": "44b61f752637441c4c0151f478e098f86ea6ecdd2b2f0d0ff17aa770057ad98f",
+						"type": "string"
+					},
+					{
+						"key": "clientId",
+						"value": "C470f238d6fa205559e57b2d650e0f29f1bab3e0134c74e19e004c34eb0124479",
+						"type": "string"
+					},
+					{
+						"key": "tokenName",
+						"value": "Admin_CCBcamp",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "https://webexapis.com/v1/access_token",
+						"type": "string"
+					},
+					{
+						"key": "redirect_uri",
+						"value": "https://admin.webex.com",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Token Service",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token-passphrase",
+								"value": "vbLQko8W0xmbv74",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://us-central1-naboo-wxcc-lab.cloudfunctions.net/token-service?name={{Custname}}",
+							"protocol": "https",
+							"host": [
+								"us-central1-naboo-wxcc-lab",
+								"cloudfunctions",
+								"net"
+							],
+							"path": [
+								"token-service"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{Custname}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Init Token (Danger)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token-passphrase",
+								"value": "vbLQko8W0xmbv74",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://us-central1-naboo-wxcc-lab.cloudfunctions.net/token-service/init?name={{Custname}}",
+							"protocol": "https",
+							"host": [
+								"us-central1-naboo-wxcc-lab",
+								"cloudfunctions",
+								"net"
+							],
+							"path": [
+								"token-service",
+								"init"
+							],
+							"query": [
+								{
+									"key": "x-token-passphrase",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "{{Custname}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Devices",
+			"item": [
+				{
+					"name": "RoomBar Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deviceId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLWVhc3QtMl9hL0RFVklDRS82NjgxZDlhMC05Yjg5LTRmZDYtOGJhMS02YjU5N2Q5Y2U4NjA=\",\n  \"arguments\": {\n    \"CallId\": 42\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://roomos.cisco.com/xapi/Command.Call.Disconnect/",
+							"protocol": "https",
+							"host": [
+								"roomos",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"xapi",
+								"Command.Call.Disconnect",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomBar Dial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deviceId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLWVhc3QtMl9hL0RFVklDRS82NjgxZDlhMC05Yjg5LTRmZDYtOGJhMS02YjU5N2Q5Y2U4NjA=\",\n  \"arguments\": {\n    \"BookingId\": \"4555\",\n    \"CallRate\": 4000,\n    \"CallType\": \"Auto\",\n    \"DisplayName\": \"MTR\",\n    \"Number\": \"canewton@cisco.com\",\n    \"Protocol\": \"Sip\",\n    \"TrackingData\": \"value\"\n  }\n};",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webexapis.com/v1/xapi/command/Dial",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"xapi",
+								"command",
+								"Dial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPeoplePresence",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deviceId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLWVhc3QtMl9hL0RFVklDRS82NjgxZDlhMC05Yjg5LTRmZDYtOGJhMS02YjU5N2Q5Y2U4NjA=\",\n  \"arguments\": {\n    \"BookingId\": \"4555\",\n    \"CallRate\": 4000,\n    \"CallType\": \"Auto\",\n    \"DisplayName\": \"MTR\",\n    \"Number\": \"canewton@cisco.com\",\n    \"Protocol\": \"Sip\",\n    \"TrackingData\": \"value\"\n  }\n};",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webexapis.com/v1/xapi/status/?deviceId={{DeviceID}}&name=RoomAnalytics.PeoplePresence",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"xapi",
+								"status",
+								""
+							],
+							"query": [
+								{
+									"key": "deviceId",
+									"value": "{{DeviceID}}"
+								},
+								{
+									"key": "name",
+									"value": "RoomAnalytics.PeoplePresence"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Device Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/devices/{{DeviceID}}",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"devices",
+								"{{DeviceID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/workspaceMetrics?workspaceId={{Device_WorkspaceID}}&metricName=PeopleCount",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"workspaceMetrics"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{Device_WorkspaceID}}"
+								},
+								{
+									"key": "metricName",
+									"value": "PeopleCount"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Schedule Callbacks",
+			"item": [
+				{
+					"name": "DB MGMT",
+					"item": [
+						{
+							"name": "Get Data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/items/",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"items",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Value Of Callbacks",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/timeslots/GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ/callback-capacity-Saturday-AM",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"timeslots",
+										"GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ",
+										"callback-capacity-Saturday-AM"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RequestedCallbacks",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"First\": \"CarlBosch\",\n        \"Last\": \"TestPhone\",\n        \"E164\": \"+447577740451\",\n        \"Email\": \"carl.d.newton+boschsup@gmail.com\",\n        \"TicketID\": \"11111\",\n        \"Timeslot\": \"callback-capacity-Friday-PM\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/requestedCallbacks",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"requestedCallbacks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Callbacks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/requestedCallbacks",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"requestedCallbacks"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Callbacks",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://bosch-server.wbx.ninja/requestedCallbacks",
+											"protocol": "https",
+											"host": [
+												"bosch-server",
+												"wbx",
+												"ninja"
+											],
+											"path": [
+												"requestedCallbacks"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 05 Dec 2023 12:24:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "896"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"380-XGpFqGDsbM0hWN2oZZLZkISzcbM\""
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"First\": \"Carl\",\n        \"Last\": \"Newton\",\n        \"E164\": \"+447577740451\",\n        \"Email\": \"canewton@cisco.com\",\n        \"TicketID\": \"886543\",\n        \"Timeslot\": \"callback-capacity-Wednesday-PM\"\n    },\n    {\n        \"First\": \"Victor\",\n        \"Last\": \"Vasquez\",\n        \"E164\": \"+447577740500\",\n        \"Email\": \"vvasquez@cisco.com\",\n        \"TicketID\": \"853533\",\n        \"Timeslot\": \"callback-capacity-Monday-PM\"\n    },\n    {\n        \"First\": \"Rajitha\",\n        \"Last\": \"Kantheti\",\n        \"E164\": \"+18642805923\",\n        \"Email\": \"rkanthet@cisco.com\",\n        \"TicketID\": \"886545\",\n        \"Timeslot\": \"callback-capacity-Monday-PM\"\n    },\n    {\n        \"First\": \"Rajitha\",\n        \"Last\": \"Kantheti\",\n        \"E164\": \"+18642805923\",\n        \"Email\": \"rkanthet@cisco.com\",\n        \"TicketID\": \"886580\",\n        \"Timeslot\": \"callback-capacity-Friday-AM\"\n    },\n    {\n        \"First\": \"Rajitha\",\n        \"Last\": \"Kantheti\",\n        \"E164\": \"+18642805923\",\n        \"Email\": \"rkanthet@cisco.com\",\n        \"TicketID\": \"886581\",\n        \"Timeslot\": \"callback-capacity-Friday-AM\"\n    },\n    {\n        \"First\": \"USER1\",\n        \"Last\": \"Vasquez\",\n        \"E164\": \"+493912882876\",\n        \"Email\": \"canewton@cisco.com\",\n        \"TicketID\": \"25487\",\n        \"Timeslot\": \"callback-capacity-Monday-PM\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Delete callback",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/requestedCallbacks/853533",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"requestedCallbacks",
+										"853533"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Direct Get Of Timeslot",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/items/GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ/callback-capacity-Monday-AM",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"items",
+										"GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ",
+										"callback-capacity-Monday-AM"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Threshold For Queue",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"threshold\": \"610\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/threshold/GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ/",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"threshold",
+										"GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Threshold For Queue Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"threshold\": \"610\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bosch-server.wbx.ninja/threshold/GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ/",
+									"protocol": "https",
+									"host": [
+										"bosch-server",
+										"wbx",
+										"ninja"
+									],
+									"path": [
+										"threshold",
+										"GP_BMW_CIC_1stLevel_GWKKulanz_Callback_IQ",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SMSFlowStart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"SMSNumber\": \"+12099641260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hooks.us.webexconnect.io/events/5952VIDLQQ",
+							"protocol": "https",
+							"host": [
+								"hooks",
+								"us",
+								"webexconnect",
+								"io"
+							],
+							"path": [
+								"events",
+								"5952VIDLQQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WXCC: Initiate Callback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destination\":\"+493912882876\",\n    \"entryPointId\":\"5d0c535e-a39e-4dec-9ad8-88275b038ebc\",\n    \"attributes\":\n        {\n            \"channel\":\"sales\"\n        },\n    \"outboundType\":\"CALLBACK\",\n    \"mediaType\":\"telephony\",\n    \"callback\":\n                {\n                    \"callbackOrigin\":\"web\",\n                    \"callbackType\":\"immediate\"\n                }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.wxcc-us1.cisco.com/v1/tasks",
+							"protocol": "https",
+							"host": [
+								"api",
+								"wxcc-us1",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reporting Copy",
+			"item": [
+				{
+					"name": "List Reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/reports",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/reports?reportId=Y2lzY29zcGFyazovL3VzL1JFUE9SVC8xNDIwM2NhNzFmNmM0OTc0YWFhYWRmMDEzM2M3YjBmOA",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reports"
+							],
+							"query": [
+								{
+									"key": "reportId",
+									"value": "Y2lzY29zcGFyazovL3VzL1JFUE9SVC8xNDIwM2NhNzFmNmM0OTc0YWFhYWRmMDEzM2M3YjBmOA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reportdownload-a.webex.com/api?reportId=Y2lzY29zcGFyazovL3VzL1JFUE9SVC80M2U0YzcwYzA2ZDE0MTM0YmFjMmI5NWRiYzM1MTEzYg",
+							"protocol": "https",
+							"host": [
+								"reportdownload-a",
+								"webex",
+								"com"
+							],
+							"path": [
+								"api"
+							],
+							"query": [
+								{
+									"key": "reportId",
+									"value": "Y2lzY29zcGFyazovL3VzL1JFUE9SVC80M2U0YzcwYzA2ZDE0MTM0YmFjMmI5NWRiYzM1MTEzYg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Call Queue Stats Report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateId\":600,\n    \"startDate\": \"2022-10-06\",\n    \"endDate\": \"2022-12-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webexapis.com/v1/reports",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detailed Call History",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateId\":500,\n    \"startDate\": \"2022-10-04\",\n    \"endDate\": \"2022-10-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webexapis.com/v1/reports",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Call Queue agent Stats",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateId\":605,\n    \"startDate\": \"2022-10-06\",\n    \"endDate\": \"2022-12-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webexapis.com/v1/reports",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webexapis.com/v1/report/templates",
+							"protocol": "https",
+							"host": [
+								"webexapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"report",
+								"templates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentCollection",
+			"item": [
+				{
+					"name": "CampaignContacts",
+					"item": [
+						{
+							"name": "Get Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{MockAPIID}}.mockapi.io/collections",
+									"protocol": "https",
+									"host": [
+										"{{MockAPIID}}",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"collections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Record",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"FirstName\": \"Martyffff\",\n        \"LastName\": \"Predovicffff\",\n        \"PhoneNo\": \"+447888982271fff\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{MockAPIID}}.mockapi.io/collections",
+									"protocol": "https",
+									"host": [
+										"{{MockAPIID}}",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"collections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Records",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"PhoneNo\": \"+447888982271\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{MockAPIID}}.mockapi.io/collections/1",
+									"protocol": "https",
+									"host": [
+										"{{MockAPIID}}",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"collections",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Init RequestPayment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"MobNum\": \"+12099641260\",\n    \"FirstName\": \"Carl\",\n    \"LastName\": \"Newton\",\n    \"PaymentDue\": \"199\",\n    \"DueDate\": \"1/9/2025\",\n    \"RefNum\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hooks.us.webexconnect.io/events/{{PAYMENTWEBHOOK}}",
+							"protocol": "https",
+							"host": [
+								"hooks",
+								"us",
+								"webexconnect",
+								"io"
+							],
+							"path": [
+								"events",
+								"{{PAYMENTWEBHOOK}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentConfirmed",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"waId\": \"+12099641260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hooks.us.webexconnect.io/events/{{PAYMENTCONFIRMWEBHOOK}}",
+							"protocol": "https",
+							"host": [
+								"hooks",
+								"us",
+								"webexconnect",
+								"io"
+							],
+							"path": [
+								"events",
+								"{{PAYMENTCONFIRMWEBHOOK}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOAuthToken",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hook\":\"null\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hooks.us.webexconnect.io/events/{{OAUTHWEBHOOK}}",
+							"protocol": "https",
+							"host": [
+								"hooks",
+								"us",
+								"webexconnect",
+								"io"
+							],
+							"path": [
+								"events",
+								"{{OAUTHWEBHOOK}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utility",
+			"item": [
+				{
+					"name": "WorldTime London",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://worldtimeapi.org/api/timezone/Europe/London",
+							"protocol": "https",
+							"host": [
+								"worldtimeapi",
+								"org"
+							],
+							"path": [
+								"api",
+								"timezone",
+								"Europe",
+								"London"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dad Joke",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "d83c51ed8fmshc1b3e0a5e182a64p10f578jsnaf3f795bbea3",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "dad-jokes.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dad-jokes.p.rapidapi.com/random/joke",
+							"protocol": "https",
+							"host": [
+								"dad-jokes",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"random",
+								"joke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JDS",
+			"item": [
+				{
+					"name": "Custom WxConnect - Merge JDS Identities and Add Aliases If Required",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "key",
+								"value": "WxConnectSecretKey"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n** Now use: https://developer.webex-cx.com/documentation/journey/v1/creates-or-merges-aliases-to-an-individual-in-jds\n\n{\n\t\"First\": \"Barry2\",\n\t\"Last\": \"smith2\",\n\t\"Numbers\": \"phone:13333334453,phone:+13333334453,email:4bsmith4454@yahoo.com,email:myself@there.com,customerId:334689557617731186\"\n}"
+						},
+						"url": {
+							"raw": "https://hooks.us.webexconnect.io/events/2QF64C3V6M",
+							"protocol": "https",
+							"host": [
+								"hooks",
+								"us",
+								"webexconnect",
+								"io"
+							],
+							"path": [
+								"events",
+								"2QF64C3V6M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create - journey-default-template2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"encodedAlias\", btoa(\"LeyTlRcYmi7xH4OfQUr0HKpH6YFrvCXRIlD\"));",
+									"console.log(pm.environment.get(\"encodedAlias\"));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"journey-default-template2\",\r\n    \"attributes\": [\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"task:new\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"origin\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"No of times contacted in the last 24 hours\",\r\n            \"lookBackDurationType\": \"hours\",\r\n            \"lookBackPeriod\": 24,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": null,\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": true\r\n        },\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"task:new\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"origin\",\r\n            \"limit\": 700,\r\n            \"displayName\": \"No of times contacted in the last 7 days\",\r\n            \"lookBackDurationType\": \"days\",\r\n            \"lookBackPeriod\": 7,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": null,\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": true\r\n        },\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"task:new\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"origin\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"No of times contacted in the last 7 days via email\",\r\n            \"lookBackDurationType\": \"days\",\r\n            \"lookBackPeriod\": 7,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"task:new,channelType,string,Value EQ email\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": true\r\n        },\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"task:new\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"origin\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"No of times contacted in the last 7 days via chat\",\r\n            \"lookBackDurationType\": \"days\",\r\n            \"lookBackPeriod\": 7,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"task:new,channelType,string,Value EQ chat\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": true\r\n        },\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"task:new\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"origin\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"No of times contacted in the last 7 days via telephony\",\r\n            \"lookBackDurationType\": \"days\",\r\n            \"lookBackPeriod\": 7,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"task:new,channelType,string,Value EQ telephony\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - journey-default-template2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"encodedAlias\", btoa(\"LeyTlRcYmi7xH4OfQUr0HKpH6YFrvCXRIlD\"));",
+									"console.log(pm.environment.get(\"encodedAlias\"));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/646b996ea146175d536cc83f",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"646b996ea146175d536cc83f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create email default events for journey-default-template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"specversion\": \"1.0\",\n  \"type\": \"task:new\",\n  \"source\": \"wxcc\",\n  \"id\": \"{{$guid}}\",\n  \"identity\": \"customerEmail@company.com\",\n  \"identitytype\": \"email\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"taskId\": \"{{$guid}}\",\n    \"origin\": \"customerEmail@company.com\",\n    \"channelType\": \"email\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create chat default events for journey-default-template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \n{\n  \"specversion\": \"1.0\",\n  \"type\": \"task:new\",\n  \"source\": \"wxcc\",\n  \"id\": \"{{$guid}}\",\n  \"identity\": \"customerEmail@company.com\",\n  \"identitytype\": \"email\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"taskId\": \"{{$guid}}\",\n    \"origin\": \"customerEmail@company.com\",\n    \"channelType\": \"chat\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create telephony default events for journey-default-template Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \n{\n  \"specversion\": \"1.0\",\n  \"type\": \"task:new\",\n  \"source\": \"wxcc\",\n  \"id\": \"{{$guid}}\",\n  \"identity\": \"+12263331234\",\n  \"identitytype\": \"phone\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"taskId\": \"{{$guid}}\",\n    \"origin\": \"+12263331234\",\n    \"channelType\": \"telephony\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create social default events for journey-default-template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \n{\n  \"specversion\": \"1.0\",\n  \"type\": \"task:new\",\n  \"source\": \"wxcc\",\n  \"id\": \"{{$guid}}\",\n  \"identity\": \"12263331234\",\n  \"identitytype\": \"phone\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"taskId\": \"{{$guid}}\",\n    \"origin\": \"12263331234\",\n    \"channelType\": \"social\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Progressive Profile View - journey-default-template2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/journey-default-template2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"journey-default-template2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Progressive Template values against user",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/6468d0924e00f35f0113b74b/template-name/journey-default-template2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"progressive-profile-view",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6468d0924e00f35f0113b74b",
+								"template-name",
+								"journey-default-template2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Progressive Template values against user using template-id instead - journey-default-template2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/6468d0924e00f35f0113b74b/template-id/646b99e3a146175d536cc846",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"progressive-profile-view",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6468d0924e00f35f0113b74b",
+								"template-id",
+								"646b99e3a146175d536cc846"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History Stream by Identity with filters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"identity\", encodeURIComponent(\"+12263331234\"));",
+									"console.log(pm.environment.get(\"identity\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/events/workspace-id/{{workspaceId}}?identity={{identity}}&filter=type=='Payment'&data=category=='Water'&pageSize=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"events",
+								"workspace-id",
+								"{{workspaceId}}"
+							],
+							"query": [
+								{
+									"key": "identity",
+									"value": "{{identity}}"
+								},
+								{
+									"key": "filter",
+									"value": "type=='Payment'"
+								},
+								{
+									"key": "data",
+									"value": "category=='Water'"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History Stream by Identity",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"identity\", encodeURIComponent(\"18495598991\"));",
+									"console.log(pm.environment.get(\"identity\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/events/workspace-id/{{workspaceId}}?identity={{identity}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"events",
+								"workspace-id",
+								"{{workspaceId}}"
+							],
+							"query": [
+								{
+									"key": "organizationId",
+									"value": "1eb65fdf-9643-417f-9974-ad72cae0e10f",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "identity",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "identityType%3D%3D%27phone%27",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "agentid%3D%3D%273224343fddfdfdf%27",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "{{identity}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History Stream",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"identity\", encodeURIComponent(\"18495598991\"));",
+									"console.log(pm.environment.get(\"identity\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/events/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"events",
+								"workspace-id",
+								"{{workspaceId}}"
+							],
+							"query": [
+								{
+									"key": "organizationId",
+									"value": "1eb65fdf-9643-417f-9974-ad72cae0e10f",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "identity",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "identityType%3D%3D%27phone%27",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "agentid%3D%3D%273224343fddfdfdf%27",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simplified Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"task:new\",\n    \"source\": \"test\",\n    \"identity\": \"customerEmail@company.com\",\n    \"identitytype\": \"email\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"uiData\": {\n            \"title\": \"Payment Due\",\n            \"iconType\": \"telephony\",\n            \"subTitle\": \"Payment Due 30 days\"\n            }\n    }\n  }"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full Featured Custom Post w/ Comments needs to be edited",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "See https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README_VERSION_10.0.0.md\n{\n  \"id\": \"{{$guid}}\",\n  \"specversion\": \"1.0\",\n  \"type\": \"task:new\",\n  \"source\": \"custom/{{$guid}}\",\n  \"identity\": \"12263331234\",\n  \"identitytype\": \"phone\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"Website visited\": \"[google](https://www.google.com)\",\n    \"Visit Duration\": \"any fields you want goes in the data section\",\n    \"transcript\":\"Text here will go into a modal window! You can fetch your transcript using the Captures API and post it in here! You may want to parse the script first\",\n    \"uiData\": {\n      \"division\": \"Department 1\", <-- If you set the CAD Variable JDSDivision within flow control, the widget will only show events filtered by that value\n      \"hidden\": \"Test\",   <--  This will hide your entry from the agent desktop, but will still store it in JDS\n      \"title\": \"My main title screen\",\n      \"iconType\": \"Pick your custom ICON here!\",\n      \"subTitle\": \"Smaller case subtitle! You can use Java escape codes in any text for emoji's \\u2705\",\n      \"filterTags\": [\"mortage\"]  <-- If you set the CAD Variable JDSDefaultFilter within flow control, the widget will initially load with that particular filter set.\n    }\n  }\n} \n"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC1 - Payment Past Due Notify 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"id\": \"{{$guid}}\",\n  \"specversion\": \"1.0\",\n  \"type\": \"Payment\",\n  \"source\": \"SMS%20Notifcation\",\n  \"identity\": \"+12263331234\",\n  \"identitytype\": \"phone\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"phone\": \"+12263331234\",\n    \"Reason\": \"Late Payment Notification Sent – Notification\",\n    \"MessageForUser\" : \"We have noticed your Waterbill payment is overdue. The payment of $544.73 was due Thursday, March 23rd.\",\n    \"LinkSent\": \"[Payment URL](https://buy.stripe.com/test_4gw8AnfIUbLBcbC8wB)\",    \n    \"Notification\": \"1\",\n    \"Past Due Amount\": \"$544.73\",\n    \"category\": \"Water\",\n    \"status\": \"overdue\",\n    \"channelBreakout\": \"sms\",\n    \"uiData\": {\n        \"title\": \"\\u26A0\\uFE0F Past Due - 1st Notification\",\n        \"iconType\": \"Payment Notify\",\n        \"subTitle\": \"Payment Due 30 days\"\n        }\n}}\n"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC1 - Check Payment Past Due Notify 1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"encodedIdentity\", encodeURIComponent(\"+12263331234\"));",
+									"console.log(pm.environment.get(\"encodedIdentity\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/events/workspace-id/{{workspaceId}}?identity={{encodedIdentity}}&filter=type=='Payment'&data=category=='Water'&pageSize=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"events",
+								"workspace-id",
+								"{{workspaceId}}"
+							],
+							"query": [
+								{
+									"key": "identity",
+									"value": "{{encodedIdentity}}"
+								},
+								{
+									"key": "filter",
+									"value": "type=='Payment'"
+								},
+								{
+									"key": "data",
+									"value": "category=='Water'"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC1 - Payment Past Due Notify 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"id\": \"{{$guid}}\",\n  \"specversion\": \"1.0\",\n  \"type\": \"Payment\",\n  \"source\": \"SMS%20Notifcation\",\n  \"identity\": \"+12263331234\",\n  \"identitytype\": \"phone\",\n  \"datacontenttype\": \"application/json\",\n  \"data\": {\n    \"phone\": \"+12263331234\",\n    \"Reason\": \"Late Payment Notification Sent – Notification\",\n    \"MessageForUser\" : \"We have noticed your Waterbill payment is overdue. The payment of $544.73 was due Thursday, March 23rd.\",\n    \"LinkSent\": \"[Payment URL](https://buy.stripe.com/test_4gw8AnfIUbLBcbC8wB)\",    \n    \"Notification\": \"2\",\n    \"Past Due Amount\": \"$544.73\",\n    \"category\": \"Water\",\n    \"status\": \"overdue\",\n    \"channelBreakout\": \"sms\",\n    \"uiData\": {\n        \"title\": \"\\u23F0 Past Due - 2nd Notification\",\n        \"iconType\": \"Payment Notify\",\n        \"subTitle\": \"Payment Due 30 days\"\n        }\n}}\n"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC1 - Payment Made",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"Payment\",\n    \"source\": \"SMS%20Notifcation\",\n    \"identity\": \"+12263331234\",\n    \"identitytype\": \"phone\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"phone\": \"+12263331234\",\n        \"Past Due Amount\": \"$544.73\",\n        \"category\": \"Water\",\n        \"status\": \"complete\",\n        \"channelBreakout\": \"sms\",\n        \"uiData\": {\n            \"title\": \"\\u2705 Payment Processed\",\n            \"iconType\": \"Payment Complete\",\n            \"subTitle\": \"Payment Complete\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - Create Profile Template Repeat Caller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"encodedAlias\", btoa(\"LeyTlRcYmi7xH4OfQUr0HKpH6YFrvCXRIlD\"));",
+									"console.log(pm.environment.get(\"encodedAlias\"));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"RepeatCaller\",\r\n    \"attributes\": [\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"Payment Queue\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"category\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"RepeatCallers\",\r\n            \"lookBackDurationType\": \"minutes\",\r\n            \"lookBackPeriod\": 5,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"Payment Queue,category,string,Value EQ Payment\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": false\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - Update Profile Template Repeat Caller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"encodedAlias\", btoa(\"LeyTlRcYmi7xH4OfQUr0HKpH6YFrvCXRIlD\"));",
+									"console.log(pm.environment.get(\"encodedAlias\"));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"RepeatCaller\",\r\n    \"attributes\": [\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"Payment Queue\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"category\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"RepeatCallers\",\r\n            \"lookBackDurationType\": \"minutes\",\r\n            \"lookBackPeriod\": 5,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"Payment Queue,category,string,Value EQ Payment\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": false\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/64666544e357c630c8038f8a",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64666544e357c630c8038f8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - Get All Profile View Templates",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}"
+							],
+							"query": [
+								{
+									"key": "organizationId",
+									"value": "1eb65fdf-9643-417f-9974-ad72cae0e10f",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "createdBy%3D%3Dsatjonna%40cisco.com",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "DESC",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "updatedAt",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - POST Queued Caller Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"Payment Queue\",\n    \"source\": \"Voice%20Contact\",\n    \"identity\": \"+12263331234\",\n    \"identitytype\": \"phone\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"phone\": \"+12263331234\",\n        \"CallsQueuedNow\": \"Use GetQueueInfoNode Values\",\n        \"OldestCallTime\": \"Use GetQueueInfoNode Values\",\n        \"LoggedOnAgents\": \"Use GetQueueInfoNode Values\",\n        \"PIQ\": \"Use GetQueueInfoNode Values\",\n        \"EWT\": \"Use GetQueueInfoNode Values\",\n        \"category\": \"Payment\",\n        \"channelBreakout\": \"voice\",\n        \"uiData\": {\n            \"title\": \"Payment Queue\",\n            \"iconType\": \"QueueCallNeutral\",\n            \"subTitle\": \"EWT: Use GetQueueInfoNode Values PIQ:Use GetQueueInfoNode Values\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - Progressive Profile View Repeat Caller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-name/RepeatCaller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-name",
+								"RepeatCaller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC2 - Get Progressive Template values against RepeatCaller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/6468d0924e00f35f0113b74b/template-id/RepeatCaller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"progressive-profile-view",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6468d0924e00f35f0113b74b",
+								"template-id",
+								"RepeatCaller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Delete - ClosedCaller Profile",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/64663b0aaeab251ed5b5d790",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64663b0aaeab251ed5b5d790"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Create Profile Template Closed Caller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ClosedCaller\",\r\n    \"attributes\": [\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"Closed Queue\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"category\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"ClosedCaller\",\r\n            \"lookBackDurationType\": \"minutes\",\r\n            \"lookBackPeriod\": 5,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"Closed Queue,category,string,Value EQ Closed\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": false\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Update Profile Template ClosedCopy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ClosedCaller\",\r\n    \"attributes\": [\r\n        {\r\n            \"version\": \"0.1\",\r\n            \"event\": \"Closed Queue\",\r\n            \"metaDataType\": \"string\",\r\n            \"metaData\": \"category\",\r\n            \"limit\": 100,\r\n            \"displayName\": \"ClosedCaller\",\r\n            \"lookBackDurationType\": \"minutes\",\r\n            \"lookBackPeriod\": 5,\r\n            \"aggregationMode\": \"Count\",\r\n            \"rules\": {\r\n                \"logic\": \"SINGLE\",\r\n                \"condition\": \"Closed Queue,category,string,Value EQ Closed\"\r\n            },\r\n            \"widgetAttributes\": {\r\n                \"type\": \"table\"\r\n            },\r\n            \"verbose\": false\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/64677fcdf096dd1139f2b463",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64677fcdf096dd1139f2b463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Progressive Profile View Closed Caller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-name/ClosedCaller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"profile-view-template",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-name",
+								"ClosedCaller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Create Journey Actions For Closed Callers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Closed Queue Action\",\r\n    \"isActive\": true,\r\n    \"cooldownPeriodInMinutes\": 1,\r\n    \"rules\": {\r\n        \"logic\": \"SINGLE\",\r\n        \"condition\": \"Closed Queue,category,string,Count EQ 2\"\r\n    },\r\n    \"actionTriggers\": [\r\n        {\r\n            \"type\": \"Webhook\",\r\n            \"webhookURL\": \"https://hooks.us.webexconnect.io/events/6M347NJ6HY\",\r\n            \"attributes\": {\r\n                \"httpverb\": \"post\",\r\n                \"requestbody\": \"{\\\"SMS\\\":\\\"12263331234\\\",\\\"callID\\\":\\\"\\\",\\\"MessageToSend\\\":\\\"Hello there!\\\"}\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/journey-actions/workspace-id/{{workspaceId}}/template-id/64677fcdf096dd1139f2b463",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"journey-actions",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64677fcdf096dd1139f2b463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Update Journey Actions For Closed Callers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Closed Queue Action\",\r\n    \"isActive\": true,\r\n    \"cooldownPeriodInMinutes\": 1,\r\n    \"rules\": {\r\n        \"logic\": \"SINGLE\",\r\n        \"condition\": \"Closed Queue,category,string,Count EQ 2\"\r\n    },\r\n    \"actionTriggers\": [\r\n        {\r\n            \"type\": \"Webhook\",\r\n            \"webhookURL\": \"https://hooks.us.webexconnect.io/events/6M347NJ6HY\",\r\n            \"attributes\": {\r\n                \"httpverb\": \"post\",\r\n                \"requestbody\": \"{\\\"SMS\\\":\\\"12263331234\\\",\\\"callID\\\":\\\"\\\",\\\"MessageToSend\\\":\\\"Hello there!\\\"}\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/journey-actions/workspace-id/{{workspaceId}}/template-id/64677fcdf096dd1139f2b463",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"journey-actions",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64677fcdf096dd1139f2b463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Get Journey Actions For Closed Callers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/journey-actions/workspace-id/{{workspaceId}}/template-id/64677fcdf096dd1139f2b463",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"journey-actions",
+								"workspace-id",
+								"{{workspaceId}}",
+								"template-id",
+								"64677fcdf096dd1139f2b463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - POST Unstaffed Closed Caller Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"Closed Queue\",\n    \"source\": \"Voice%20Contact\",\n    \"identity\": \"+12263331234\",\n    \"identitytype\": \"phone\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"phone\": \"+12263331234\",\n        \"category\": \"Closed\",\n        \"channelBreakout\": \"voice\",\n        \"uiData\": {\n            \"title\": \"Unstaffed While in Queue\",\n            \"iconType\": \"QueueCallMad\",\n            \"subTitle\": \"\\uD83D\\uDD52 Queue Closed\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - POST Closed Caller Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"Closed Queue\",\n    \"source\": \"Voice%20Contact\",\n    \"identity\": \"+12263331234\",\n    \"identitytype\": \"phone\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"phone\": \"+12263331234\",\n        \"category\": \"Closed\",\n        \"channelBreakout\": \"voice\",\n        \"uiData\": {\n            \"title\": \"Called After Hours\",\n            \"iconType\": \"QueueCallMad\",\n            \"subTitle\": \"\\uD83C\\uDF19 Queue Closed\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UC3 - Get Progressive Template values against ClosedCaller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/64657b750c804f1b4167b428/template-id/64677fcdf096dd1139f2b463",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"progressive-profile-view",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"64657b750c804f1b4167b428",
+								"template-id",
+								"64677fcdf096dd1139f2b463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Event - Icon Example",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"specversion\": \"1.0\",\n    \"type\": \"Icons\",\n    \"source\": \"Postman\",\n    \"identity\": \"+12263331234\",\n    \"identitytype\": \"phone\",\n    \"datacontenttype\": \"application/json\",\n    \"data\": {\n        \"phone\": \"+12263331234\",\n        \"status\": \"overdue\",\n        \"channelBreakout\": \"sms\",\n        \"uiData\": {\n            \"title\": \"Test 5 - My title\",\n            \"iconType\": \"Test 5\",\n            \"subTitle\": \"Your subtitle here!\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/publish/v1/api/event?workspaceId={{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"publish",
+								"v1",
+								"api",
+								"event"
+							],
+							"query": [
+								{
+									"key": "workspaceId",
+									"value": "{{workspaceId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Identity",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"identity\", encodeURIComponent(\"+12263331234\"));\r",
+									"console.log(pm.environment.get(\"identity\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/{{identity}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"workspace-id",
+								"{{workspaceId}}",
+								"aliases",
+								"{{identity}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Identity By Multiple Aliases",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"identity\", encodeURIComponent(\"+12263331234\"));\r",
+									"console.log(pm.environment.get(\"identity\"));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/+12263331234,+442045202476,+113333334453,bsmith4454@yahoo.com",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"workspace-id",
+								"{{workspaceId}}",
+								"aliases",
+								"+12263331234,+442045202476,+113333334453,bsmith4454@yahoo.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Merge one/more Identities to a Primary",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"personIdsToMerge\": [\n    \"6468d0ae4e00f35f0113b74f\",\"6468d0dba146175d536cc798\"\n  ]\n}\n"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/merge/workspace-id/{{workspaceId}}/primary-person-id/6468d0924e00f35f0113b74b",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"merge",
+								"workspace-id",
+								"{{workspaceId}}",
+								"primary-person-id",
+								"6468d0924e00f35f0113b74b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Identity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Barry\",\r\n  \"lastName\": \"smith\",\r\n  \"phone\": [\r\n    \"+12263331234\",\r\n    \"12263331234\"\r\n  ],\r\n  \"email\": [\r\n    \"bmclella2@cisco.com\"\r\n  ],\r\n  \"customerId\": [\r\n    \"4689557617731186\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"workspace-id",
+								"{{workspaceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Identity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/person-id/6464f22e0c804f1b4167b378",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6464f22e0c804f1b4167b378"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Alias To an Identity",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone\": [\n    \"+19205919581\"\n  ],\n  \"email\": [\n    \"s1@test.com\"\n  ],\n  \"customerId\": [\n    \"ed22059qw\"\n  ],\n  \"temporaryId\": [\n    \"3423rssdf\"\n  ]  \n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/add-identities/workspace-id/{{workspaceId}}/person-id/6468d0924e00f35f0113b74b",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"add-identities",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6468d0924e00f35f0113b74b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Alias from Identity",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"smith@gmail.com\",\"ed22059qw\"]\n"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/remove-identities/workspace-id/{{workspaceId}}/person-id/6468d0924e00f35f0113b74b",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"remove-identities",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"6468d0924e00f35f0113b74b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adds/Removes one/more Identities or Replace firstName,lastName of an Individual in JDS",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"op\": \"add\",\n        \"path\": \"/phone/1\",\n        \"value\": \"+12263762557\"\n    },\n    {\n        \"op\": \"replace\",\n        \"path\": \"/lastName\",\n        \"value\": \"smith\"\n    },\n    {\n        \"op\": \"add\",\n        \"path\": \"/email/0\",\n        \"value\": \"customerEmail@company.com\"\n    },\n    {\n        \"op\": \"add\",\n        \"path\": \"/customerId/0\",\n        \"value\": \"4165548863\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/person-id/64657b750c804f1b4167b428",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"v1",
+								"api",
+								"person",
+								"workspace-id",
+								"{{workspaceId}}",
+								"person-id",
+								"64657b750c804f1b4167b428"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "KVWL_Token",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{Authurl}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secretJDS}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_idJDS}}",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "new",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://webexapis.com/v1/access_token",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/callback",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_idJDS",
+			"value": "client Id for App",
+			"type": "string"
+		},
+		{
+			"key": "client_secretJDS",
+			"value": "secret Key for App",
+			"type": "string"
+		},
+		{
+			"key": "org_idJDS",
+			"value": "e5a15a07-b35f-4c8c-8b70-bffd9be8fa16",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://api-jds.wxdap-prodeu2.webex.com",
+			"type": "string"
+		},
+		{
+			"key": "workspaceId",
+			"value": "67a0e49ea04e7d7d641024a4",
+			"type": "string"
+		},
+		{
+			"key": "DeviceID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Device_WorkspaceID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "identity",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Authurl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Custname",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
