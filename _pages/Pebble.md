@@ -92,7 +92,7 @@ Result: **`495`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/daysbetween.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/daysbetween.png" height="400" />
 
 ## Elapsed Milliseconds
 
