@@ -88,7 +88,7 @@ Returns the number of days between now and a given date.
 
 Expression: **`{{ (now() | epoch / 86400) - ("October 1, 2023 00:00" | epoch(format="MMMM d, yyyy HH:mm") / 86400) }}`**
 
-Result: **`494`**
+Result: **`495`**
 
 <!-- {%endraw%} -->
 
