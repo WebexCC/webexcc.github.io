@@ -162,4 +162,4 @@ Result: **`true`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Vmtimeout.png" height="200" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Vmtimeout.png" height="300" />
