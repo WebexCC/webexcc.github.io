@@ -4,7 +4,19 @@ date: 2025-01-30
 layout: post
 ---
 
-**Pebble Playground** is a collection of useful pebble expressions for use in Webex Contact Centre flows.
+**Pebble Playground** is a collection of useful Pebble expressions for use in Webex Contact Centre flows.
+
+All Pebble expressions are placed inside of a set of double curly braces, however the expression input box can take both Pebble expressions and plain text, adjacent to one another.
+
+E.g., Assuming name is "Anthony" and company is "Cisco"
+
+<!-- {%raw%} -->
+
+Expression: **`Hello {{ name }}! Thank you for calling {{ company }}.`**
+
+Result: **`Hello Anthony! Thank you for calling Cisco.`**
+
+<!-- {%endraw%} -->
 
 # Working with Dates and Time
 
@@ -12,7 +24,7 @@ This section contains time related expressions and functions, useful for process
 
 ## Current Date and Time
 
-Return the current date and time.
+Return the current date and time with a custom WxCC function.
 
 <!-- {%raw%} -->
 
