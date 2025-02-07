@@ -34,7 +34,9 @@ Result: **`2025-02-06T21:09:02.712Z[UTC]`**
 
 <!-- {%endraw%} -->
 
-<img src="/assets/images/Pebbleplayground/now.png" height="400" />
+<!-- img src="/assets/images/Pebbleplayground/now.png" height="400" -->
+
+![Screenshot of the expression and its results](/assets/images/Pebbleplayground/now.png)
 
 ## Epoch (Seconds since January 1, 2970 12:00am)
 
