@@ -122,6 +122,8 @@ Result: **`3`**
 
 <!-- {%endraw%} -->
 
+<img src="/assets/images/Pebbleplayground/randnum1.png" height="400" />
+
 ### Option 2
 
 This second example returns a random number between a lower bound and an upper bound: 90 and 180, in this example. Useful for "Randomising" the start offset of music on hold, so you don't play the same 10 second clip of music repeatedly, Burning the same 10 seconds of Cisco Opus into a callers mind, driving them insane in the process.
@@ -134,7 +136,7 @@ Result: **`121`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/randnum.png" height="400" -->
+<!--img src="/assets/images/Pebbleplayground/randnum2.png" height="400" -->
 
 ## Queue Time Threshold
 
