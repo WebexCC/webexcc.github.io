@@ -4,7 +4,19 @@ date: 2025-01-30
 layout: post
 ---
 
-**Pebble Playground** is a collection of useful pebble expressions for use in Webex Contact Centre flows.
+**Pebble Playground** is a collection of useful Pebble expressions for use in Webex Contact Centre flows.
+
+All Pebble expressions are placed inside of a set of double curly braces, however the expression input box can take both Pebble expressions and plain text, adjacent to one another.
+
+E.g., Assuming name is "Anthony" and company is "Cisco"
+
+<!-- {%raw%} -->
+
+Expression: **`Hello {{ name }}! Thank you for calling {{ company }}.`**
+
+Result: **`Hello Anthony! Thank you for calling Cisco.`**
+
+<!-- {%endraw%} -->
 
 # Working with Dates and Time
 
@@ -12,7 +24,7 @@ This section contains time related expressions and functions, useful for process
 
 ## Current Date and Time
 
-Return the current date and time.
+Return the current date and time with a custom WxCC function.
 
 <!-- {%raw%} -->
 
@@ -22,7 +34,7 @@ Result: **`2025-02-06T21:09:02.712Z[UTC]`**
 
 <!-- {%endraw%} -->
 
-<img src="/assets/images/Pebbleplayground/now.png" height="400" />
+<img style="border: 1px solid grey" src="/assets/images/Pebbleplayground/now.png" height="200" />
 
 ## Epoch (Seconds since January 1, 2970 12:00am)
 
@@ -36,7 +48,7 @@ Result: **`1738876452`**
 
 <!-- {%endraw%} -->
 
-<img src="/assets/images/Pebbleplayground/NowEpoch.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/NowEpoch.png" height="200" />
 
 ## Epoch for Static Date and Time
 
@@ -50,7 +62,7 @@ Result: **`1702166400`**
 
 <!-- {%endraw%} -->
 
-<img src="/assets/images/Pebbleplayground/epochofdate.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/epochofdate.png" height="200" />
 
 ## Day of Week
 
@@ -64,7 +76,7 @@ Result: **`Thursday`**
 
 <!-- {%endraw%} -->
 
-<img src="/assets/images/Pebbleplayground/currentday.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/currentday.png" height="200" />
 
 ## Tomorrow's Day of Week
 
@@ -74,11 +86,11 @@ Returns the name of the day of the week for tomorrow.
 
 Expression: **`{{ (now() | epoch(inMillis=true) + 86400000) | date("EEEE") }}`**
 
-Result: **`Friday`**
+Result: **`Saturday`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/Tomorrow.png" height="400" -->
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Tomorrow.png" height="200" />
 
 ## Elapsed Days
 
@@ -88,11 +100,11 @@ Returns the number of days between now and a given date.
 
 Expression: **`{{ (now() | epoch / 86400) - ("October 1, 2023 00:00" | epoch(format="MMMM d, yyyy HH:mm") / 86400) }}`**
 
-Result: **`494`**
+Result: **`495`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/daysbetween.png" height="400" -->
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/daysbetween.png" height="200" />
 
 ## Elapsed Milliseconds
 
@@ -102,11 +114,11 @@ Returns the number of Ms between now and a given date.
 
 Expression: **`{{ now() | epoch(inMillis=true) - "October 1, 2023 00:00" | epoch(inMillis=true, format="MMMM d, yyyy HH:mm") }}`**
 
-Result: **`42753373824`**
+Result: **`42817072377`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/msbetweendate.png" height="400" -->
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/msbetweendate.png" height="200" />
 
 ## Pseudo-Random Numbers
 
@@ -118,9 +130,11 @@ Returns a single digit number that seems random. Behind the scenes, we are using
 
 Expression: **`{{ now() | epoch(inMillis=true) % 10 }}`**
 
-Result: **`3`**
+Result: **`5`**
 
 <!-- {%endraw%} -->
+
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum1.png" height="200" />
 
 ### Option 2
 
@@ -130,11 +144,11 @@ This second example returns a random number between a lower bound and an upper b
 
 Expression: **`{{ ((now() | epoch(inMillis=true) % 1000 / 1000.0) * (180 - 90) + 90) | numberformat("#") }}`**
 
-Result: **`121`**
+Result: **`106`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/randnum.png" height="400" -->
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum2.png" height="200" />
 
 ## Queue Time Threshold
 
@@ -148,4 +162,4 @@ Result: **`true`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/Vmtimeout.png" height="400" -->
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Vmtimeout.png" height="300" />
