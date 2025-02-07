@@ -48,7 +48,7 @@ Result: **`1738876452`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/NowEpoch.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/NowEpoch.png" height="200" />
 
 ## Epoch for Static Date and Time
 
@@ -62,7 +62,7 @@ Result: **`1702166400`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/epochofdate.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/epochofdate.png" height="200" />
 
 ## Day of Week
 
@@ -76,7 +76,7 @@ Result: **`Thursday`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/currentday.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/currentday.png" height="200" />
 
 ## Tomorrow's Day of Week
 
@@ -90,7 +90,7 @@ Result: **`Saturday`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Tomorrow.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Tomorrow.png" height="200" />
 
 ## Elapsed Days
 
@@ -104,7 +104,7 @@ Result: **`495`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/daysbetween.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/daysbetween.png" height="200" />
 
 ## Elapsed Milliseconds
 
@@ -118,7 +118,7 @@ Result: **`42817072377`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/msbetweendate.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/msbetweendate.png" height="200" />
 
 ## Pseudo-Random Numbers
 
@@ -134,7 +134,7 @@ Result: **`5`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum1.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum1.png" height="200" />
 
 ### Option 2
 
@@ -148,7 +148,7 @@ Result: **`106`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum2.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum2.png" height="200" />
 
 ## Queue Time Threshold
 
@@ -162,4 +162,4 @@ Result: **`true`**
 
 <!-- {%endraw%} -->
 
-<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Vmtimeout.png" height="400" />
+<img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/Vmtimeout.png" height="200" />
