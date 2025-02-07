@@ -118,7 +118,7 @@ Returns a single digit number that seems random. Behind the scenes, we are using
 
 Expression: **`{{ now() | epoch(inMillis=true) % 10 }}`**
 
-Result: **`3`**
+Result: **`5`**
 
 <!-- {%endraw%} -->
 
@@ -132,11 +132,11 @@ This second example returns a random number between a lower bound and an upper b
 
 Expression: **`{{ ((now() | epoch(inMillis=true) % 1000 / 1000.0) * (180 - 90) + 90) | numberformat("#") }}`**
 
-Result: **`121`**
+Result: **`106`**
 
 <!-- {%endraw%} -->
 
-<!--img src="/assets/images/Pebbleplayground/randnum2.png" height="400" -->
+<img src="/assets/images/Pebbleplayground/randnum2.png" height="400" />
 
 ## Queue Time Threshold
 
