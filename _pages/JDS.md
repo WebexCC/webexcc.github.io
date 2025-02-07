@@ -23,7 +23,7 @@ layout: post
 ## JDS Feature Overview
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/889c2cbf-51b2-4cc9-94f8-9143078dca83" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/889c2cbf-51b2-4cc9-94f8-9143078dca83" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 CJDS is an API-first service that enables organizations to:
