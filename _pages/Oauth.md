@@ -23,6 +23,7 @@ layout: post
 ![developerwebex](/assets/images/Oauth/developerwebex.gif)
 
 3. Configure Postman collection and utilise Access Token URL as 'https://webexapis.com/v1/access_token'
+![postmanintegration](/assets/images/Oauth/postmanintegration.gif)
 4. Click "Get New Access Token"
 5. Click "Accept" to auhorize connection
 ![postmanconfig](/assets/images/Oauth/postmanconfig.gif)
