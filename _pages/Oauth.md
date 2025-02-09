@@ -7,7 +7,7 @@ layout: post
 # Create OAuth for Postman to test APIs
 
 ## Usefull links:
-[Developer Webex](https://developer.webex.com/) site.
+[Developer Webex](https://developer.webex.com/) site.  
 [Postman](/assets/files/WxCC.postman_collection.json) collection.
 
 ## Explanation of steps
