@@ -1,0 +1,119 @@
+{
+        "nav" : {
+          "label" : "Cisco Website",
+          "icon" : "https://www.cisco.com/web/fw/i/logo-open-graph.gif",
+          "iconType" : "other",
+          "navigateTo" : "Cisco",
+          "align" : "top"
+        },
+        "page" : {
+          "id" : "Cisco",
+          "widgets" : {
+            "right" : {
+              "comp" : "agentx-wc-iframe",
+              "attributes" : {
+                "src" : "https://www.cisco.com"
+              }
+            }
+          },
+          "layout" : {
+            "areas" : [
+              [
+                "right"
+              ]
+            ],
+            "size" : {
+              "cols" : [
+                1
+              ],
+              "rows" : [
+                1
+              ]
+            }
+          }
+        }
+      },{
+        "nav": {
+            "label": "Facilities",
+            "icon": "stored-info",
+            "iconType": "momentum",
+            "navigateTo": "dynamic-tabs",
+            "align": "top"
+                 },    
+        "page": {
+            "id": "googlemaps",
+            "widgets": {
+                "comp1": {
+                    "comp": "md-tabs",
+                    "children": [{
+                            "comp": "md-tab",
+                            "textContent": "Google Maps",
+                            "attributes": {
+                                "slot": "tab"
+                            }
+                        },
+                        {
+                            "comp": "md-tab-panel",
+                            "attributes": {
+                                "slot": "panel"
+                            },
+                            "children": [{
+                                "comp": "agentx-wc-iframe",
+                                "attributes": {
+                                "src" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6573259082966!2d7.485351876619728!3d51.50115557181191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9176c96695c1b%3A0xb9e36100278e3c9b!2sKassen%C3%A4rztliche%20Vereinigung%20Westfalen-Lippe!5e0!3m2!1sen!2suk!4v1740570938388!5m2!1sen!2suk"
+                               }
+                            }]
+                        },
+                        {
+                            "comp": "md-tab",
+                            "textContent": "Cisco",
+                            "responsive": false,
+                            "attributes": {
+                                "slot": "tab"
+                            }
+                        },
+                        {
+                            "comp": "md-tab-panel",
+                            "attributes": {
+                                "slot": "panel"
+                            },
+                            "children": [{
+                                "comp": "agentx-wc-iframe",
+                                "attributes": {
+                                    "src": "hhttps://www.cisco.com/"
+                                }
+                            }]
+                        },
+                        {
+                            "comp": "md-tab",
+                            "textContent": "what3words",
+                            "attributes": {
+                                "slot": "tab"
+                            }
+                        },
+                        {
+                          "comp": "md-tab-panel",
+                          "attributes": {
+                              "slot": "panel"
+                          },
+                          "children": [{
+                              "comp": "agentx-wc-iframe",
+                              "attributes": {
+                                  "src": "https://what3words.com/subsets.sand.tropic"
+                              }
+                          }]
+                      }
+                    ]
+                }
+            },
+            "layout": {
+                "areas": [
+                    ["comp1"]
+                ],
+                "size": {
+                    "cols": [1],
+                    "rows": [1]
+                }
+            }
+        }
+    }
