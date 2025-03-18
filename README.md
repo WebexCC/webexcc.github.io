@@ -15,7 +15,9 @@ Detailed explanation and configuration steps can be reviewed on <https://webexcc
 | :----: | :---------------------------------------------------------: |
 |   1    |          [Basic WxCC Call Flow](/pages/BasicFlow/)          |
 |   2    | [Enable Customer Journey Data Services (CJDS)](/pages/JDS/) |
-|   3    |       [API request in the call flow](/pages/APIflow)        |
-|   4    |             [Pebble Playground](/pages/Pebble)              |
+|   3    |      [Webex Virtual Assistance bot](/pages/NativeVA/)       |
+|   4    |       [API request in the call flow](/pages/APIflow)        |
+|   5    |             [Pebble Playground](/pages/Pebble)              |
+|   6    |              [OAuth for Postman](/pages/Oauth)              |
 
 <center><img src="/assets/gitbook/images/ccep.png" width="100"></center>
