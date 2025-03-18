@@ -99,7 +99,13 @@ Jouney project may be activated with the `Webex Contact Center connector`. This 
 
 ### Enable Customer Journey Widget on an Agent Desktop
 
-1. Download the following Desktop Layout JSON file [JDSDesktopLayout](/assets/files//JDSDesktopLayout10.json).
+1. We recommend adding JDS to your existing desktop layout using a code snippet. You can get the relevant code [here](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README_VERSION_10.0.0.md#how-to-add-the-cjds-widget-into-an-existing-desktop-layout).
+
+Here is a screenshot of the block in place (notice it is after `IVR_TRASNCRIPT` and before `WXM_JOURNEY_TAB`).
+
+![JDSWidgetCode](/assets/images/JDS/JDS_Widget_Code.png)
+
+Alternatively, Download this [Desktop Layout JSON file](/assets/desktoplayouts/JDS10_AIAssistant.json) which includes the JDS widget and AI Assistant.
 
 2. Sign in to Control Hub and go to `Contact Center > Desktop Layouts`.
 
@@ -107,68 +113,17 @@ Jouney project may be activated with the `Webex Contact Center connector`. This 
 
 4. Assign an `Agent Team`.
 
-5. Upload the Desktop Layout JSON file that you downloaded in **step 1**.
+5. Upload the Desktop Layout JSON file that you downloaded or created in **step 1**.
 
 6. Click `Save`.
 
 ![jdsuploadwidget](/assets/images/JDS/jds_upload_widget.gif)
 
-> `Note:` If you are interested in adding the CJDS Widget to your existing desktop layout in your own tenant, use the below code snippet.
-
-**CJDS Widget Code Block**
-
-```
-          {
-            "comp": "md-tab",
-            "attributes": {
-              "slot": "tab",
-              "class": "widget-pane-tab"
-            },
-            "children": [
-              {
-                "comp": "span",
-                "textContent": "Customer Journey"
-              }
-            ]
-          },
-          {
-            "comp": "md-tab-panel",
-            "attributes": {
-              "slot": "panel",
-              "class": "widget-pane"
-            },
-            "children": [
-              {
-                "comp": "customer-journey-widget",
-                "script": "https://journey-widget.webex.com",
-                "attributes": {
-                  "show-alias-icon": "true",
-                  "condensed-view": "true"
-                },
-                "properties": {
-                  "interactionData": "$STORE.agentContact.taskSelected",
-                  "bearerToken": "$STORE.auth.accessToken",
-                  "organizationId": "$STORE.agent.orgId",
-                  "dataCenter": "$STORE.app.datacenter"
-                },
-                "wrapper": {
-                  "title": "Customer Journey Widget",
-                  "maximizeAreaName": "app-maximize-area"
-                }
-              }
-            ]
-          },
-```
-
-Here is a screenshot of the block in place (notice it is after `IVR_TRASNCRIPT` and before `WXM_JOURNEY_TAB`).
-
-![JDSWidgetCode](/assets/images/JDS/JDS_Widget_Code.png)
-
 ### View Customer Journey Widget on an Agent desktop
 
-1. Login as an Agent into `Agent Desktop`. Ensure that the **desktop layout** of the Agent's Team has `JDS Widget` configured as per the previous steps.
+1. Login as an Agent into `Agent Desktop`. Ensure that the **desktop layout** of the Agent's Team has the JDS widget configured as per the previous steps.
 
-2. On **Accepting** an incoming request, the `CJDS Widget` will appear in the desktop.
+2. On **Accepting** an incoming request, the `CJDS Widget` will appear in the desktop. If you are using AI Agent, it may load the IVR Transcript by default. Navigate to the 'Customer Journey' tab to see it.
 
 The widget displays insights such as the number of times the customer has called or was contacted across all channels during a given duration. It also displays the journey history with default information such as `wrap-up code`, `queue name`, `agent ID` etc., and also allows to customize the event history with options such as third-party (non Webex CC) events and custom icons.
 
