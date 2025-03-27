@@ -1,10 +1,8 @@
 ---
-title: CCEP Day 1 Settings
+title: CCEP - Webex Contact Centre Day 1 Settings Tweaks
 date: 2025-03-18
 layout: post
 ---
-
-## CCEP - Webex Contact Centre Day 1 Settings Tweaks
 
 # THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
 
@@ -12,7 +10,7 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 
 # Desktop Experience —> idle/Wrap-up Codes:
 
-![Control Hub Area](../assets/images/Day1settings/idlecodes.png)
+![Control Hub Area](/assets/images/Day1settings/idlecodes.png)
 
 —Change default Idle code to “New Sign In” / remove description
 
@@ -22,7 +20,7 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 
 # Tenant Settings —> Desktop
 
-![Control Hub Area](../assets/images/Day1settings/Desktop.png)
+![Control Hub Area](/assets/images/Day1settings/Desktop.png)
 
 —Inactivity Timeout enabled, set duration to 480 Minutes
 
