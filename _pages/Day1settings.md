@@ -1,5 +1,5 @@
 ---
-title: CCEP - Webex Contact Centre Day 1 Settings Tweaks
+title: WxCC Day 1 Settings Tweaks
 date: 2025-03-18
 layout: post
 ---
@@ -10,9 +10,9 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 
 # Desktop Experience —> idle/Wrap-up Codes:
 
-![Control Hub Area](/assets/images/Day1settings/idlecodes.png)
+<img style="border: 1px solid grey;" src="/assets/images/Day1settings/idlecodes.png" height="200" />
 
-—Change default Idle code to “New Sign In” / remove description
+—Change default Idle code to “New Sign In” and remove the description
 
 —Add Idle Codes - On Phone Call, Lunch, Meeting, 15 Minute Break, Supervisor Escalation Path, Meeting
 
@@ -20,7 +20,7 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 
 # Tenant Settings —> Desktop
 
-![Control Hub Area](/assets/images/Day1settings/Desktop.png)
+<img style="border: 1px solid grey;" src="/assets/images/Day1settings/Desktop.png" height="200" />
 
 —Inactivity Timeout enabled, set duration to 480 Minutes
 
