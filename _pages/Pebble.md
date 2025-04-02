@@ -120,7 +120,7 @@ Result: **`42817072377`**
 
 <img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/msbetweendate.png" height="200" />
 
-## Pseudo-Random Numbers
+# Pseudo-Random Numbers
 
 ### Option 1
 
@@ -150,7 +150,7 @@ Result: **`106`**
 
 <img style="border: 1px solid grey;" src="/assets/images/Pebbleplayground/randnum2.png" height="200" />
 
-## Queue Time Threshold
+# Queue Time Threshold
 
 QTime should be a variable set right after the queue contact node in the flow using a simple now() Epoch. VMTimeout is an integer that can be loaded from a global variable. The above statement will allow you to evaluate true or false if a person has been queueing longer than the specified VM Timeout.
 
