@@ -18,7 +18,7 @@ Output:
 * random_number (integer) via `$.random_number`, e.g., 7
 
 Javascript:
-```javascript
+```
 export const handle = async (request, response) => {
     const { lower_bound, upper_bound } = request.inputs;
     
@@ -36,7 +36,7 @@ export const handle = async (request, response) => {
 
 # Regex Pattern Matcher
 
-If you need to see if some input from the caller matches a specific pattern, like when the caller inputs an extension of phone number via Collect Digits, and you want to make sure it's within a valid input range, you could use this needle in the haystack search feature, to valid good input.
+If you need to see if some input from the caller matches a specific pattern, like when the caller inputs an extension or phone number via Collect Digits, and you want to make sure it's within a valid input range, you could use this "needle in the haystack" search feature, to validate good input.
 
 Input Variables:
 * needle (String), e.g., 6125551212
@@ -46,7 +46,7 @@ Output:
 * match (boolean) via `$.match`, e.g., True
 
 Javascript:
-```javascript
+```
 export const handle = async (request, response) => {
     const { needle, haystack } = request.inputs;
     try {
