@@ -108,7 +108,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 - Provide a desired name and select the team that the agent is part of. Also, download the dekstop layout.
   ![Outbound](/assets/images/Acqueon/AE_9.2.9.png)
 
-- Edit the downloaded layout in any desired text editor and follow the instructions as per the desktop layout customization guide available here to update the layout: https://help.webex.com/en-us/article/ng08gqeb/Create-custom-desktop-layout (search for `agentx-preview-campaign` in this article to view the respective content)
+- Edit the downloaded layout in any desired text editor and follow the instructions as per the desktop layout customization guide available [here](https://help.webex.com/en-us/article/ng08gqeb/Create-custom-desktop-layout) to update the layout. (search for `agentx-preview-campaign` in this article to view the respective content)
 
 - Save this layout as a new file and upload it to desktop layout configuration. Click `Save`
   ![Outbound](/assets/images/Acqueon/AE_9.2.11.png)
