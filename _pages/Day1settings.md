@@ -10,7 +10,7 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 <BR><BR>
 Unless stated otherwise, all settings should be carried out from Control Hub, under the Contact Center Menu.
 
-![Control Hub Menu Area](../assets/images/Day1settings/CH_WxCCPage.png)
+![Control Hub Menu Area](/assets/images/Day1settings/CH_WxCCPage.png)
 
 # Desktop Experience —> Idle/Wrap-up Codes:
 
