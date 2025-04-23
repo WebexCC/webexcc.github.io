@@ -7,7 +7,10 @@ layout: post
 # THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
 
 This page contains a list of recommended setup tweaks for Webex Contact Centre that the CCEP team use during our <a href="https://collabtoolbox.cisco.com/trials/managed-trials" target="_blank">managed customer trials.</a>
+<BR><BR>
 Unless stated otherwise, all settings should be carried out from Control Hub, under the Contact Center Menu.
+
+![Control Hub Menu Area](../assets/images/Day1settings/CH_WxCCPage.png)
 
 # Desktop Experience —> Idle/Wrap-up Codes:
 
