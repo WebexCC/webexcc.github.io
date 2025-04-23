@@ -8,15 +8,15 @@ layout: post
 
 This page contains a list of recommended setup tweaks for Webex Contact Centre that the CCEP team use during our <a href="https://collabtoolbox.cisco.com/trials/managed-trials" target="_blank">managed customer trials.</a>
 
-# Desktop Experience —> idle/Wrap-up Codes:
+# Desktop Experience —> Idle/Wrap-up Codes:
 
-<img style="border: 1px solid grey;" src="/assets/images/Day1settings/idlecodes.png" height="200" />
+<ul>
+<li>Change default Idle code to “New Sign In” and remove the description</li>
 
-—Change default Idle code to “New Sign In” and remove the description
+<li>Add Idle Codes - On Phone Call, Lunch, Meeting, 15 Minute Break, Supervisor Escalation Path, Meeting</li>
 
-—Add Idle Codes - On Phone Call, Lunch, Meeting, 15 Minute Break, Supervisor Escalation Path, Meeting
-
-—Change default Wrap Up Code to “No Wrap Up Selected” / remove description
+<li>Change default Wrap Up Code to “No Wrap Up Selected” / remove description</li>
+</ul>
 
 # Tenant Settings —> Desktop
 
