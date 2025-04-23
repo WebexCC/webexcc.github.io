@@ -7,6 +7,7 @@ layout: post
 # THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
 
 This page contains a list of recommended setup tweaks for Webex Contact Centre that the CCEP team use during our <a href="https://collabtoolbox.cisco.com/trials/managed-trials" target="_blank">managed customer trials.</a>
+Unless stated otherwise, all settings should be carried out from Control Hub, under the Contact Center Menu.
 
 # Desktop Experience —> Idle/Wrap-up Codes:
 
@@ -20,45 +21,43 @@ This page contains a list of recommended setup tweaks for Webex Contact Centre t
 
 # Tenant Settings —> Desktop
 
-<img style="border: 1px solid grey;" src="/assets/images/Day1settings/Desktop.png" height="200" />
+<ul>
+<li>Inactivity Timeout enabled, set duration to 480 Minutes</li>
+<li>Enable End Call - turn slider ON</li>
+<li>RONA Timeout for Telephony - 12 seconds</li>
+<li>Webex App - Turn State Synchronization ON</li>
+<li>Set On a Call to “On Phone Call” idle code</li>
+<li>Set all others to “Do Not Sync”</li>
+</ul>
 
-—Inactivity Timeout enabled, set duration to 480 Minutes
+# User Management —> Sites
 
-—Enable End Call - turn slider ON
+<ul>
+<li>Change Site Name from Site-1 to customer name</li>
+</ul>
+# User Management —> Teams
+<ul>
+<li>Add new team, call it “IT Service Desk” or similar, select Parent Site, select Agent Based</li>
+</ul>
 
-—RONA Timeout for Telephony - 12 seconds
+# Customer Experience —> Queues
 
-—Webex App - Turn State Synchronization ON
+<ul>
+<li>Open the default Inbound Queue</li>
 
-——Set On a Call to “On Phone Call” idle code
+<li>Rename it to something appropriate to your use case</li>
 
-——Set all others to “Do Not Sync”
+<li>Remove Description</li>
 
-User Management —> Sites
+<li>Scroll Down to Contact Routing Settings and click on the pencil icon under the group, uncheck the default team and check “IT Service Desk” team you created earlier, save</li>
 
-—Change Site Name from Site-1 to customer name
+<li>Verify “Permit Monitoring” turned on</li>
 
-User Management —> Teams
+<li>Verify “Pause/Resume Enabled” turned on</li>
 
-—Add new team, call it “IT Service Desk”, select Parent Site, select Agent Based
+<li>Set Maximum time in Queue to 86400</li>
 
-Customer Experience —> Queues
-
-—Open the default Inbound Queue
-
-—Rename it “IT Service Desk - New User”
-
-—Remove Description
-
-—Scroll Down to Contact Routing Settings and click on the pencil icon under the group, uncheck the default team and check “IT Service Desk” team, save
-
-—Verify “Permit Monitoring” turned on
-
-—Verify “Pause/Resume Enabled” turned on
-
-—Set Maximum time in Queue to 86400
-
-—Set Default Music in Queue to defaultmusic_on_hold_cisco_opus
+<li>Set Default Music in Queue to <a href="https://www.youtube.com/watch?v=KC_NwHDpbFo" target="_blank">defaultmusic_on_hold_cisco_opus</a></li>
 
 —SAVE
 
