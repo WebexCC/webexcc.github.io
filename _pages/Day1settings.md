@@ -62,8 +62,6 @@ Unless stated otherwise, all settings should be carried out from Control Hub, un
 
 <BR>
 
-<li>COPY the queue you just modified, rename it to “IT Service Desk - Password”, all other settings remain the same</li>
-
 # User Management —> Teams
 
 <li>Open the default team that the system created</li>
