@@ -72,3 +72,21 @@ I can also reference Custom Variable in the usual way as well:
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-test.png" height="300" />
+
+## Output Data
+
+While the result of the outcome from the Evaluate step (e.g., 0 = Success), is natively available by way of the Node's Output Variables:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-outcome-variable.png" height="300" />
+
+It's not an easy place to pass anything meaningful, or more than a simple piece of data; therefore, the use of Custom Variabes (for those of you coming from WxCC Flow Designer, these are like Flow Variables), is a great place to store just about anything you want, regardless of the overall outcome of the script (e.g., 0 = Success).
+
+For example, the customer variable I show just above, I can use it in the script, as follows:
+
+**Note**: I do not use the `$(variable)` syntax here, as I am not trying to convert the variable to its value, rather, I am storing new data inside of it.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output.png" height="300" />
+
+I felt the best way to show you that the custom variable was actually modified, I would show you the node execution in the debugger.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output-debug.png" height="300" />
