@@ -21,3 +21,11 @@ As you can see in the above example:
 - I am typing `0;` as the script itself, which, is how you return output. You do not need the keyword `return` as you might be used to in vanilla JS.
 - I have one branch created called "Success" (the name is up to you)
 - I set the output value for that branch to match what the script is outputing
+
+# Bare Bones Testing
+
+There is a code testing function within the node, and if you click test, then click test again, it will either show you some output, or an error.
+
+In my case, if I test the bare bones script, I can see that the output is `0` and the matched branch is "Success".
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="200" />
