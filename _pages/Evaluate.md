@@ -10,4 +10,4 @@ While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the 
 
 With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle.
 
-![jdsprov](/assets/images/Evaluate/bare-bones.png)
+![barebones](/assets/images/Evaluate/bare-bones.png)
