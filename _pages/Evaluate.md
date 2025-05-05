@@ -104,4 +104,4 @@ Here is an example of both:
 
 And you can see this local variables in the test output (although, they will not be visible in debug output):
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variable-test.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables-test.png" height="300" />
