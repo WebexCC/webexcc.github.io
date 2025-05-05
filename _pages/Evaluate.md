@@ -87,6 +87,6 @@ For example, the custom variable I show just above, I can use it in the script, 
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output.png" height="300" />
 
-I felt the best way to show you that the custom variable was actually modified, that I would show you the node execution in the debugger.
+I felt the best way to show you that the custom variable was actually modified, would be to show you the node execution in the debugger:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output-debug.png" height="300" />
