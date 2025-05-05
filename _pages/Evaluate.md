@@ -14,7 +14,7 @@ With this in mind, you likely cannot use typical AI code generation tools, even 
 
 The most basic script you could possibly write, returns a value of any type, and also has one output branch, which matches your return value, and is given some kind of label.
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones.png" height="200" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones.png" height="300" />
 
 As you can see in the above example:
 
@@ -28,4 +28,4 @@ There is a code testing function within the node, and if you click test, then cl
 
 In my case, if I test the bare bones script, I can see that the output is `0` and the matched branch is "Success".
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="200" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="300" />
