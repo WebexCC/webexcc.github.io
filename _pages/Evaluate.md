@@ -10,4 +10,14 @@ While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the 
 
 With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle.
 
-![barebones](/assets/images/Evaluate/bare-bones.png)
+# Bare Bones Script
+
+The most basic script you could possibly write, returns a value of any type, and also has one output branch, which matches your return value, and is given some kind of label.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones.png" height="200" />
+
+As you can see in the above example:
+
+- I am typing `0;` as the script itself, which, is how you return output. You do not need the keyword `return` as you might be used to in vanilla JS.
+- I have one branch created called "Success" (the name is up to you)
+- I set the output value for that branch to match what the script is outputing
