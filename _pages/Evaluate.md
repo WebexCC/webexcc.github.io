@@ -32,14 +32,20 @@ In my case, if I test the bare bones script, I can see that the output is `0` an
 
 ## Bare Bones Outcomes
 
-As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two addition error handling outcomes:
+As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two addition error handling outcomes (what they connect to, is not important right now; we'll get to that later):
 
 - `onInvalidChoice` is for when there is no error in your code, but the output the script gave, did not match any of your branches.
 - `onError` is for when your code threw an error and therefore failed to finish executing
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-outcomes.png" height="300" />
 
-**TIP**: You cannot connect more than one successful outcome branches to the same node. See the below screenshot for how I handle a second successful outcome branch. The top route for "Success" goes to one node, while the second route for "Alternate" goes to another node; they both cannot go to the same node.
+### Branching
+
+The Evaluate node has a built in branching mechanism, such that you do not need to connect the success outputs of the Evaluate node to the input of a Branch node.
+
+In the following screenshot, I have created an additional branch called "Alternate," and I am connecting each success branch to its own path for further processing.
+
+**Note**: You cannot connect two success branches to the same next node, they must connect to unique nodes.
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-1.png" height="300" />
 
