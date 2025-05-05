@@ -90,3 +90,18 @@ For example, the custom variable I show just above, I can use it in the script, 
 I felt the best way to show you that the custom variable was actually modified, would be to show you the node execution in the debugger:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output-debug.png" height="300" />
+
+# Local Variables
+
+Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. In vaniall Javascript, there are two main ways to create a local variable:
+
+- `const` is a keyword which creates a local variable whose value should never change
+- `let` is a keyword which creates a local variable whose value can change over time
+
+Here is an example of both:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
+
+And you can see this local variables in the test output (although, they will not be visible in debug output):
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variable-test.png" height="300" />
