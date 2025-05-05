@@ -50,3 +50,25 @@ In the following screenshot, I have created an additional branch called "Alterna
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-1.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-2.png" height="300" />
+
+# Handling Input and Output
+
+Moving beyond a bare bones script, you might want to work with input data, and output data. Below we will cover the basics of input and output.
+
+## Input Data
+
+By default, you can use other node's variables, just like you do in most other nodes. In this example, my inbound webhook is looking for a JSON payload with a key named "input" in it, and my Evaluate node can reference it as follows:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable.png" height="300" />
+
+If I want to test my code, and provide a sample input data, I can do that like this, and notice how my `person` variable now contains the input value:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable-test.png" height="300" />
+
+I can also reference Custom Variable in the usual way as well:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-test.png" height="300" />
