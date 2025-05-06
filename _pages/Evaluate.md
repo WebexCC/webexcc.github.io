@@ -4,7 +4,7 @@ date: 2025-05-05
 layout: post
 ---
 
-<img src="/assets/images/Evaluate/under-construction" />
+<img src="/assets/images/Evaluate/under-construction.gif" />
 
 **Evaluate** is a node within a Webex Connect flow, which allows you to execute Javascript code.
 
