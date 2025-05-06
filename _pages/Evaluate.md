@@ -127,6 +127,6 @@ You can use code generation tools, like the one built into Webex Connect, but yo
 
 Here's an example of some prompt engineering I did, in order to get a code sample to work for me; although, I did have to add one line (line 22) of code to store the "name", so that I can see it in the Test output. As the test output doesn't print objects out, just "[object Object]".
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/lai-code-generation-prompt-engineering.png" height="600" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering.png" height="600" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering-test.png" height="300" />
