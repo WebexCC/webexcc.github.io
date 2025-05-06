@@ -107,3 +107,16 @@ Here is an example of both:
 You can see these local variables in the test output. They will not be visible in debug output, and as mentioned earlier, not available to other nodes in the flow.
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables-test.png" height="300" />
+
+# IMI Helper Libraries
+
+Since Rhino is limited in its capabilities, the IMI team has created some custom libraries which contain helper functions that are typically native in vanilla Javascript.
+
+This is how you use them, it's pretty straight forward, just note the following:
+
+- When importing the library, its name is lower case and not meant to be quoted like a string would be
+- When using the library, its name is UPPER CASE
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/library.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/library-test.png" height="300" />
