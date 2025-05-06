@@ -110,7 +110,7 @@ You can see these local variables in the test output. They will not be visible i
 
 # IMI Helper Libraries
 
-Since Rhino is limited in its capabilities, the IMI team has created some custom libraries which contain helper functions that are typically native in vanilla Javascript.
+Since Rhino is limited in its capabilities, the IMI team has created some [custom libraries](https://help.webexconnect.io/docs/evaluate#pre-defined-functions) which contain helper functions that are typically native in vanilla Javascript.
 
 This is how you use them, it's pretty straight forward, just note the following:
 
