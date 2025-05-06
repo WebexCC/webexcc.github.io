@@ -95,7 +95,7 @@ I felt the best way to show you that the custom variable was actually modified, 
 
 # Local Variables
 
-Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. In vanilla Javascript, there are two main ways to create a local variable:
+Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. You can think of a local variable as data created and used within the Evaluate node, so it's naturally self-contained. In vanilla Javascript, there are two main ways to create a local variable:
 
 - `const` is a keyword which creates a local variable whose value should never change
 - `let` is a keyword which creates a local variable whose value can change over time
