@@ -10,6 +10,8 @@ While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the 
 
 With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle.
 
+In this article, I aim to teach you the basics of the Evaluate node, but not make you a Javascript expert.
+
 # Bare Bones Script
 
 The most basic script you could possibly write, returns a value of any type, and also has one output branch, which matches your return value, and is given some kind of label.
@@ -93,7 +95,7 @@ I felt the best way to show you that the custom variable was actually modified, 
 
 # Local Variables
 
-Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. In vaniall Javascript, there are two main ways to create a local variable:
+Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. In vanilla Javascript, there are two main ways to create a local variable:
 
 - `const` is a keyword which creates a local variable whose value should never change
 - `let` is a keyword which creates a local variable whose value can change over time
