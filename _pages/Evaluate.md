@@ -104,6 +104,6 @@ Here is an example of both:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
 
-And you can see these local variables in the test output (although, they will not be visible in debug output):
+You can see these local variables in the test output. They will not be visible in debug output, and as mentioned earlier, not available to other nodes in the flow.
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables-test.png" height="300" />
