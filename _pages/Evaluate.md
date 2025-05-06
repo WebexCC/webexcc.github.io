@@ -8,7 +8,7 @@ layout: post
 
 While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the [Rhino JS Engine](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), and therefore, [is not compatible](https://mozilla.github.io/rhino/compat/engines.html) with more common Javascript programming features and concepts.
 
-With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle.
+With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle. I touch on this later in the article.
 
 In this article, I aim to teach you the basics of the Evaluate node, but not make you a Javascript expert.
 
@@ -120,3 +120,13 @@ This is how you use them, it's pretty straight forward, just note the following:
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/library.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/library-test.png" height="300" />
+
+# AI Code Generation
+
+You can use code generation tools, like the one built into Webex Connect, but you might have to massage the output, or do a little prompt engineering, in order for the code to work for you.
+
+Here's an example of some prompt engineering I did, in order to get a code sample to work for me; although, I did have to add one line (line 22) of code to store the "name", so that I can see it in the Test output. As the test output doesn't print objects out, just "[object Object]".
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/lai-code-generation-prompt-engineering.png" height="600" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering-test.png" height="300" />
