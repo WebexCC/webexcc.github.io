@@ -61,21 +61,31 @@ Moving beyond a bare bones script, you might want to work with input data, and o
 
 ## Input Data
 
-By default, you can use other node's variables, just like you do in most other nodes. In this example, my inbound webhook is looking for a JSON payload with a key named "input" in it, and my Evaluate node can reference it as follows:
+By default, you can use other node's variables, just like you do in most other nodes: `$(variable)`. In the below example, my inbound webhook is looking for a JSON payload with a key named "input" in it, and my Evaluate node can reference it as follows:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable.png" height="300" />
+
+**Note**: You must wrap it in quotes in order for this method to work. We'll take a look at an alternate method in a moment.
 
 If I want to test my code, and provide a sample input data, I can do that like this, and notice how my `person` variable now contains the input value:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable-test.png" height="300" />
 
-I can also reference Custom Variable in the usual way as well:
+I can also reference Custom Variable in the same way:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-test.png" height="300" />
+
+Alternatively, but only for custom variables, you can do it like this:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-naked.png" height="300" />
+
+If you try that method for node output variables, you will receive an error:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output--variable-as-input-naked.png" height="300" />
 
 ## Output Data
 
@@ -87,8 +97,6 @@ It's not an easy place to pass anything meaningful, or more than a simple piece 
 
 For example, the custom variable I show just above, I can use it in the script, as follows:
 
-**Note**: I do not use the `$(variable)` syntax here, as I am not trying to convert the variable to its value, rather, I am storing new data inside of it.
-
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output.png" height="300" />
 
 I felt the best way to show you that the custom variable was actually modified, would be to show you the node execution in the debugger:
@@ -97,7 +105,7 @@ I felt the best way to show you that the custom variable was actually modified, 
 
 # Local Variables
 
-Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. You can think of a local variable as data created and used within the Evaluate node, so it's naturally self-contained. In vanilla Javascript, there are two main ways to create a local variable:
+Now that we've looked at how to read in data from outside of the Evaluate step, and to store data which persists after the Evaluate step executes, we should look at another useful feature: local variables. You can think of a local variable as data created and/or used within the Evaluate node, so it's naturally self-contained. In vanilla Javascript, there are two main ways to create a local variable:
 
 - `const` is a keyword which creates a local variable whose value should never change
 - `let` is a keyword which creates a local variable whose value can change over time
@@ -106,9 +114,15 @@ Here is an example of both:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
 
-You can see these local variables in the test output. They will not be visible in debug output, and as mentioned earlier, not available to other nodes in the flow.
+You can see these local variables in the test output. They will also be visible in debug output, but as mentioned earlier, not available to other nodes in the flow.
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables-test.png" height="300" />
+
+If you want to work with a custom variable, as if it was a local variable, you can do this natively, you just don't delcare it with `let` or `const` first:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-local-variable.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-local-variable-debug.png" height="300" />
 
 # IMI Helper Libraries
 
