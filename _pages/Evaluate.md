@@ -85,7 +85,7 @@ Alternatively, but only for custom variables, you can do it like this:
 
 If you try that method for node output variables, you will receive an error:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output--variable-as-input-naked.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output-variable-as-input-naked.png" height="300" />
 
 ## Output Data
 
