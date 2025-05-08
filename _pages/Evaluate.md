@@ -12,9 +12,13 @@ While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the 
 
 With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle. I touch on this later in the article.
 
-In this article, I aim to teach you the basics of the Evaluate node, but not make you a Javascript expert.
+In this article, I aim to make you an Evaluate node expert, but not make you a Javascript expert.
 
-# Bare Bones Script
+# What is the Evaluate Node?
+
+Simply put, the Evaluate node executes Javascript code, while optionally working with input and output variables, and then returning to flow execution through branching. For an example of why you might use the Evaluate node, look no further than the [sample webex connect flows on github](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows). Specifically, at the time of this writing, the [v3.3 Live Chat flow](https://github.com/CiscoDevNet/webexcc-digital-channels/blob/main/Webex%20Connect%20Flows/v3.3/Template/Media%20Specific%20Workflows/LiveChatInboundFlow.workflow.zip) uses the Evalute node quite heavily to process inbound messages, their attachments, all while caring for PCI data, etc.
+
+# Bare-Bones Script
 
 The most basic script you could possibly write, returns a value of any type, and also has one output branch, which matches your return value, and is given some kind of label.
 
@@ -22,11 +26,11 @@ The most basic script you could possibly write, returns a value of any type, and
 
 As you can see in the above example:
 
-- I am typing `0;` as the script itself, which, is how you return output. You do not need the keyword `return` as you might be used to in vanilla JS.
+- I am typing `0;` as the script itself, which, is how you indicate your return code. You do not need the keyword `return` as you might be used to in vanilla JS.
 - I have one branch created called "Success" (the name is up to you)
 - I set the output value for that branch to match what the script is outputing
 
-## Bare Bones Testing
+## Bare-Bones Testing
 
 There is a code testing function within the node, and if you click test, then click test again, it will either show you some output, or an error.
 
@@ -34,22 +38,22 @@ In my case, if I test the bare bones script, I can see that the output is `0` an
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="300" />
 
-## Bare Bones Outcomes
+## Bare-Bones Outcomes
 
-As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two addition error handling outcomes (what they connect to, is not important right now; we'll get to that later):
+As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two addition error handling outcomes:
 
-- `onInvalidChoice` is for when there is no error in your code, but the output the script gave, did not match any of your branches.
-- `onError` is for when your code threw an error and therefore failed to finish executing
+- `onInvalidChoice` is for when there is no error in your code, but the output the script gave, did not match any of your branches. E.g., You ended the script with `1;` but only built the "0 = Success" branch (as I showed above)
+- `onError` is for when your code threw an error, and therefore failed to finish executing
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-outcomes.png" height="300" />
 
-### Branching
+### Branching with Known Outcomes
 
-The Evaluate node has a built in branching mechanism, such that you do not need to connect the success outputs of the Evaluate node to the input of a Branch node.
+The Evaluate node has a built in branching mechanism, such that you do not need to connect the success output(s) of the Evaluate node to the input of a Branch node.
 
-In the following screenshot, I have created an additional branch called "Alternate," and I am connecting each success branch to its own path for further processing.
+In the following screenshot, I have created an additional branch: "1 = Alternate," and I am connecting each success branch to its own path for further processing.
 
-**Note**: You cannot connect two success branches to the same next node, they must connect to unique nodes.
+**Note**: You cannot connect two success branches to the same next node, they must connect to unique nodes. This is not specific to Evaluate node, and is a Webex Connect general behavior.
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-1.png" height="300" />
 
@@ -57,35 +61,91 @@ In the following screenshot, I have created an additional branch called "Alterna
 
 # Handling Input and Output
 
-Moving beyond a bare bones script, you might want to work with input data, and output data. Below we will cover the basics of input and output.
+Moving beyond a bare bones script, you might want to work with input data, and output data. Below we will cover the details of input and output data handling.
 
 ## Input Data
 
-By default, you can use other node's variables, just like you do in most other nodes: `$(variable)`. In the below example, my inbound webhook is looking for a JSON payload with a key named "input" in it, and my Evaluate node can reference it as follows:
+By default, and as you might imagine, you can use another node's output variables, just like you do in most other nodes (e.g., `$(variable)`). In the below example, my inbound webhook is looking for a JSON payload with a key named "input" in it, and my Evaluate node can reference it as follows:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable.png" height="300" />
-
-**Note**: You must wrap it in quotes in order for this method to work. We'll take a look at an alternate method in a moment.
 
 If I want to test my code, and provide a sample input data, I can do that like this, and notice how my `person` variable now contains the input value:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/input-node-variable-test.png" height="300" />
 
-I can also reference Custom Variable in the same way:
+I can also reference Custom Variable in the same way. Here is my custom variable definition:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable.png" height="300" />
+
+Here I am using the custom variable in my Evaluate node:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-test.png" height="300" />
 
+### Input Complexity Explained
+
+And that's the easy way, and you're free to stop reading here, and you'll probably be just fine. However, here's where things start to get a little more complex.
+
 Alternatively, but only for custom variables, you can do it like this:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-naked.png" height="300" />
 
-If you try that method for node output variables (e.g., `const person = n2.inboundWebhook.email;`), you will receive an error about `n2` being undefined:
+However, if you try that method for node output variables, you will receive an error, like this:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output-variable-as-input-naked.png" height="300" />
+
+Therefore, if you want to use node output variables in this manner, use the node's transition action for "On-Leave" to set a custom variable to the node's output variable, so that you can reference the custom variable instead.
+
+In this example, I wanted to work with the transaction ID for the flow execution, so at the start node, I set my custom variable `transaction_id` upon leave.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action.png" height="300" />
+
+And then I can refer to it in the script like so:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action-usage.png" height="300" />
+
+In fact, so far I have only referenced the custom variable in a way, that sets it to another variable, but you can just use the custom variable, as if it were a regular Javascript variable (e.g., like `let`, and not like `const`)
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variables-as-local-lets.png" height="300" />
+
+Now, interestingly, this tells us that the environment is actually exposing some variables to our Javascript, in a scope we can access, but we cannot see it. It stands to reason then, that there's more things in our scope, we can refer to, or that will clash with our work.
+
+Before I get too far, let's recall that using `let` or `const` is something you can only do once per scope. This is a Javascript specific behavior.
+
+For example, this fails to execute:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let-test.png" height="300" />
+
+So, if custom variables are already delcared, what happens when we re-declare them, like this? Spoiler: it works. Why? [Scopes](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript#variable-scope)!
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/nested-scoped-variables.png" height="300" />
+
+But it's not always that way! If my inbound webhook has defined that I will receive an email address as JSON input, then Webex Connect will make the variable `email` available to our Evaluate node, but in way which clashes with our scope.
+
+Therefore, this example will cause an error:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
+
+As you can see here in the debugger:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-variable-redeclared-debug.png" height="300" />
+
+You would be forgiven then, if you thought that you could also change this variable, to affect the node's output variable down the line in your flow, like this:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-variable-redeclared-debug.png" height="300" />
+
+But as you can see from my testing, the results are not as you would have expected, and the change is only temporary, while in the Evaluate node:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="300" />
+
+And that leads us to our next section on output variables.
 
 ## Output Data
 
