@@ -8,7 +8,7 @@ layout: post
 
 While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the [Rhino JS Engine](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), and therefore, [is not compatible](https://mozilla.github.io/rhino/compat/engines.html) with more common Javascript programming features and concepts.
 
-With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect. You might have success with the results, but you also might be fighting an unwinnable battle. I touch on this later in the article.
+With this in mind, you likely cannot use typical AI code generation tools, even the built-in one inside of Webex Connect, as-is. You might have success with the bare results, but you also might need to massage the output, or use prompt engineering to get working results. I touch on this later in the article.
 
 In this article, I aim to make you an Evaluate node expert, but not make you a Javascript expert.
 
