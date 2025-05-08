@@ -20,7 +20,7 @@ Simply put, the Evaluate node executes Javascript code, while optionally working
 
 The most basic script you could possibly write, returns a value of any type, and also has one output branch, which matches your return value, and is given some kind of label.
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones.png" height="500" />
 
 As you can see in the above example:
 
@@ -34,7 +34,7 @@ There is a code testing function within the node, and if you click test, then cl
 
 In my case, if I test the bare bones script, I can see that the output is `0` and the matched branch is "Success".
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-test.png" height="400" />
 
 ## Bare-Bones Outcomes
 
@@ -53,9 +53,9 @@ In the following screenshot, I have created an additional branch: "1 = Alternate
 
 **Note**: You cannot connect two success branches to the same next node, they must connect to unique nodes. This is not specific to Evaluate node, and is a Webex Connect general behavior.
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-1.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-1.png" height="500" />
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-2.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-second-outcome-2.png" height="400" />
 
 # Handling Input and Output
 
@@ -87,7 +87,7 @@ Unfortuntely, that's just the tip of the iceberg, and I have a supplementary sec
 
 While the result of the outcome from the Evaluate step (e.g., 0 = Success), is natively available by way of the Node's Output Variables:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-outcome-variable.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-outcome-variable.png" height="400" />
 
 It's not an easy place to pass anything meaningful, or more than a simple piece of data; therefore, the use of Custom Variabes (for those of you coming from WxCC Flow Designer, these are like Flow Variables), is a great place to store just about anything you want, regardless of the overall outcome of the script (e.g., 0 = Success).
 
@@ -97,7 +97,7 @@ For example, the custom variable I show just above, I can use it in the script, 
 
 I felt the best way to show you that the custom variable was actually modified, would be to show you the node execution in the debugger:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output-debug.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-output-debug.png" height="400" />
 
 # Local Variables
 
@@ -116,7 +116,7 @@ You can see these local variables in the test output. They will also be visible 
 
 If you want to work with a custom variable, as if it was a local variable, you can do this natively, you just don't delcare it with `let` or `const` first:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-local-variable.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-local-variable.png" height="500" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-local-variable-debug.png" height="300" />
 
@@ -139,7 +139,7 @@ You can use code generation tools, like the one built into Webex Connect, but yo
 
 Here's an example of some prompt engineering I did, in order to get a code sample to work for me; although, I did have to add one line (line 22) of code to store the "name", so that I can see it in the Test output. As the test output doesn't print objects out, just "[object Object]".
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering.png" height="600" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering.png" height="700" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering-test.png" height="300" />
 
