@@ -4,8 +4,6 @@ date: 2025-05-05
 layout: post
 ---
 
-<img src="/assets/images/Evaluate/under-construction.gif" />
-
 **Evaluate** is a node within a Webex Connect flow, which allows you to execute Javascript code.
 
 While similar to Functions in WxCC Flow Designer, the Evaluate node runs on the [Rhino JS Engine](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), and therefore, [is not compatible](https://mozilla.github.io/rhino/compat/engines.html) with more common Javascript programming features and concepts.
