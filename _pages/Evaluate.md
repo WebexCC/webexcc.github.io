@@ -143,7 +143,7 @@ But as you can see from my testing, the results are not as you would have expect
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="500" />
 
-And that leads us to our next section on output variables.
+And that leads us to our next section...
 
 ## Output Data
 
