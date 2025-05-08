@@ -139,9 +139,9 @@ You would be forgiven then, if you thought that you could also change this varia
 
 But as you can see from my testing, the results are not as you would have expected, and the change is only temporary, while in the Evaluate node:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="500" />
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="500" />
 
 And that leads us to our next section on output variables.
 
