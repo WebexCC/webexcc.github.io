@@ -45,7 +45,7 @@ As you can see in this sample flow, the green line represents the name of the br
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/bare-bones-outcomes.png" height="300" />
 
-### Branching with Known Outcomes
+### Branching with Your Outcomes
 
 The Evaluate node has a built in branching mechanism, such that you do not need to connect the success output(s) of the Evaluate node to the input of a Branch node.
 
@@ -81,67 +81,7 @@ Here I am using the custom variable in my Evaluate node:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-test.png" height="300" />
 
-### Input Complexity Explained
-
-And that's the easy way, and you're free to stop reading here, and you'll probably be just fine. However, here's where things start to get a little more complex.
-
-Alternatively, but only for custom variables, you can do it like this:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-naked.png" height="300" />
-
-However, if you try that method for node output variables, you will receive an error, like this:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output-variable-as-input-naked.png" height="300" />
-
-Therefore, if you want to use node output variables in this manner, use the node's transition action for "On-Leave" to set a custom variable to the node's output variable, so that you can reference the custom variable instead.
-
-In this example, I wanted to work with the transaction ID for the flow execution, so at the start node, I set my custom variable `transaction_id` upon leave.
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action.png" height="300" />
-
-And then I can refer to it in the script like so:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action-usage.png" height="300" />
-
-In fact, so far I have only referenced the custom variable in a way, that sets it to another variable, but you can just use the custom variable, as if it were a regular Javascript variable (e.g., like `let`, and not like `const`)
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variables-as-local-lets.png" height="300" />
-
-Now, interestingly, this tells us that the environment is actually exposing some variables to our Javascript, in a scope we can access, but we cannot see it. It stands to reason then, that there's more things in our scope, we can refer to, or that will clash with our work.
-
-Before I get too far, let's recall that using `let` or `const` is something you can only do once per scope. This is a Javascript specific behavior.
-
-For example, this fails to execute:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let.png" height="300" />
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let-test.png" height="300" />
-
-So, if custom variables are already delcared, what happens when we re-declare them, like this? Spoiler: it works. Why? [Scopes](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript#variable-scope)!
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/nested-scoped-variables.png" height="300" />
-
-But it's not always that way. If my inbound webhook has defined that I will receive an email address as JSON input, then Webex Connect will make the variable `email` available to our Evaluate node, but in a way which clashes with our scope.
-
-Therefore, this example will cause an error:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
-
-As you can see here in the debugger:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-variable-redeclared-debug.png" height="300" />
-
-You would be forgiven then, if you thought that you could also change this variable, to affect the node's output variable down the line in your flow, like this:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified.png" height="300" />
-
-But as you can see from my testing, the results are not as you would have expected, and the change is only temporary, while in the Evaluate node:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="500" />
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="500" />
-
-And that leads us to our next section...
+Unfortuntely, that's just the tip of the iceberg, and I have a supplementary section at the end of this article, on more complex input concepts.
 
 ## Output Data
 
@@ -202,3 +142,65 @@ Here's an example of some prompt engineering I did, in order to get a code sampl
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering.png" height="600" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering-test.png" height="300" />
+
+# Input Data Deep Dive
+
+This section is an optional read, and if you didn't read it, you'd still be armed to handle input data just fine.
+
+But if you want to become an expert on the Evaluate node, read on!
+
+Only for custom variables, you can alternatively do it like this:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-naked.png" height="300" />
+
+However, if you try that method for node output variables, you will receive an error, like this:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output-variable-as-input-naked.png" height="300" />
+
+Therefore, if you want to use node output variables in this manner, use the node's transition action for "On-Leave" to set a custom variable to the node's output variable, so that you can reference the custom variable instead.
+
+In this example, I wanted to work with the transaction ID for the flow execution, so at the start node, I set my custom variable `transaction_id` upon leave.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action.png" height="300" />
+
+And then I can refer to it in the script like so:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/transition-action-usage.png" height="300" />
+
+In fact, so far I have only referenced the custom variable in a way, that sets it to another variable, but you can just use the custom variable, as if it were a regular Javascript variable (e.g., like `let`, and not like `const`)
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variables-as-local-lets.png" height="300" />
+
+Now, interestingly, this tells us that the environment is actually exposing some variables to our Javascript, in a scope we can access, but we cannot see it. It stands to reason then, that there's more things in our scope, we can refer to, or that will clash with our work.
+
+Before I get too far, let's recall that using `let` or `const` is something you can only do once per scope. This is a Javascript specific behavior.
+
+For example, this fails to execute:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/double-let-test.png" height="300" />
+
+So, if custom variables are already delcared, what happens when we re-declare them, like this? Spoiler: it works. Why? [Scopes](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript#variable-scope)!
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/nested-scoped-variables.png" height="300" />
+
+But it's not always that way. If my inbound webhook has defined that I will receive an email address as JSON input, then Webex Connect will make the variable `email` available to our Evaluate node, but in a way which clashes with our scope.
+
+Therefore, this example will cause an error:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/local-variables.png" height="300" />
+
+As you can see here in the debugger:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-variable-redeclared-debug.png" height="300" />
+
+You would be forgiven then, if you thought that you could also change this variable, to affect the node's output variable down the line in your flow, like this:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified.png" height="300" />
+
+But as you can see from my testing, the results are not as you would have expected, and the change is only temporary, while in the Evaluate node:
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="500" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="500" />
