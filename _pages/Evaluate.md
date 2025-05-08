@@ -83,7 +83,7 @@ Alternatively, but only for custom variables, you can do it like this:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/custom-variable-as-input-naked.png" height="300" />
 
-If you try that method for node output variables, you will receive an error:
+If you try that method for node output variables (e.g., `const person = n2.inboundWebhook.email;`), you will receive an error about `n2` being undefined:
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/node-output-variable-as-input-naked.png" height="300" />
 
