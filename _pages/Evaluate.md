@@ -123,7 +123,7 @@ So, if custom variables are already delcared, what happens when we re-declare th
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/nested-scoped-variables.png" height="300" />
 
-But it's not always that way! If my inbound webhook has defined that I will receive an email address as JSON input, then Webex Connect will make the variable `email` available to our Evaluate node, but in way which clashes with our scope.
+But it's not always that way. If my inbound webhook has defined that I will receive an email address as JSON input, then Webex Connect will make the variable `email` available to our Evaluate node, but in a way which clashes with our scope.
 
 Therefore, this example will cause an error:
 
@@ -135,11 +135,9 @@ As you can see here in the debugger:
 
 You would be forgiven then, if you thought that you could also change this variable, to affect the node's output variable down the line in your flow, like this:
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-variable-redeclared-debug.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified.png" height="300" />
 
 But as you can see from my testing, the results are not as you would have expected, and the change is only temporary, while in the Evaluate node:
-
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified.png" height="300" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="300" />
 
