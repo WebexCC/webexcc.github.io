@@ -64,7 +64,7 @@ Unless stated otherwise, all settings should be carried out from Control Hub, un
 
 # User Management —> Teams
 
-<li>Open the default team that the system created</li>
+<li>Open the default team that the system created </li>
 
 <li>Slide the “active” slider to off (upper right)</li>
 
