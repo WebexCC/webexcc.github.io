@@ -59,23 +59,29 @@ Unless stated otherwise, all settings should be carried out from Control Hub, un
 <li>Set Maximum time in Queue to 86400</li>
 
 <li>Set Default Music in Queue to <a href="https://www.youtube.com/watch?v=KC_NwHDpbFo" target="_blank">defaultmusic_on_hold_cisco_opus</a></li>
+</ul>
 
 # User Management -> Teams
 
+<ul>
 <li>Open the default team that the system created </li>
 
 <li>Slide the “active” slider to off (upper right)</li>
 
 <li>Click trash can to delete</li>
+</ul>
 
 # Customer Experience —> Business Hours
 
+<ul>
 <li>Create Working Hours, give it an appropriate name, example “M-F0800-1800_Eastern” </li>
 
 <li>Set schedule / define working hours </li>
+</ul>
 
 # Tenant Settings —> Integrations
 
+<ul>
 <li>In the Webex Contact Center panel, choose "Set Up"</li>
 
 <li>Name Connector “API_RW”</li>
@@ -83,3 +89,4 @@ Unless stated otherwise, all settings should be carried out from Control Hub, un
 <li>Read-Write Access</li>
 
 <li>Authorize and finish</li>
+</ul>
