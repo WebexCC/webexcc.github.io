@@ -38,7 +38,7 @@ In my case, if I test the bare bones script, I can see that the output is `0` an
 
 ## Bare-Bones Outcomes
 
-As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two addition error handling outcomes:
+As you can see in this sample flow, the green line represents the name of the branch you created, and then there's two additional error handling outcomes:
 
 - `onInvalidChoice` is for when there is no error in your code, but the output the script gave, did not match any of your branches. E.g., You ended the script with `1;` but only built the "0 = Success" branch (as I showed above)
 - `onError` is for when your code threw an error, and therefore failed to finish executing
@@ -143,6 +143,14 @@ Here's an example of some prompt engineering I did, in order to get a code sampl
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/ai-code-generation-prompt-engineering-test.png" height="300" />
 
+# Debug Output Tip
+
+Maybe you've seen the output `[object Object]` in my article, or perhaps you've come across it yourself. It's not really helpful, right? So, here's a little tip to getting the debugger to actually showing you your objects.
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/json-stringify.png" height="300" />
+
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/json-stringify-test.png" height="300" />
+
 # Input Data Deep Dive
 
 This section is an optional read, and if you didn't read it, you'd still be armed to handle input data just fine.
@@ -204,3 +212,5 @@ But as you can see from my testing, the results are not as you would have expect
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-1.png" height="500" />
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/inbound-webhook-modified-debug-2.png" height="500" />
+
+And that's it. I hope you enjoyed this article. If you have any questions or comments, feel free to reach out to me. I'm sure you've seen my email address (also used in Webex app), several times in this article by now.
