@@ -149,7 +149,7 @@ Maybe you've seen the output `[object Object]` in my article, or perhaps you've 
 
 <img style="border: 1px solid grey;" src="/assets/images/Evaluate/json-stringify.png" height="300" />
 
-<img style="border: 1px solid grey;" src="/assets/images/Evaluate/json-stringify-test.png" height="300" />
+<img style="border: 1px solid grey;" src="/assets/images/Evaluate/json-stringify-test.png" height="600" />
 
 # Input Data Deep Dive
 
