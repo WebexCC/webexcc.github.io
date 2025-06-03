@@ -11,9 +11,9 @@ This page will show you how to set up contact centre flows to perform two functi
 <li>Update a variable that contains a status, this can be used to open or close the contact centre manually via IVR</li>
 <ul>
 
-<a href="./assets/files/CC_OnCall_Changer_GlobalVariable.json" target="_blank">On Call Changer Flow Download Link</a><BR><BR>
+<a href="../assets/files/CC_OnCall_Changer_GlobalVariable.json" target="_blank">On Call Changer Flow Download Link</a><BR><BR>
 
-<a href="./assets/files/CC_Status_Changer_GlobalVariable.json" target="_blank">Contact Center Status Changer Flow Download Link</a><BR><BR>
+<a href="../assets/files/CC_Status_Changer_GlobalVariable.json" target="_blank">Contact Center Status Changer Flow Download Link</a><BR><BR>
 
 See the following Vidcast for detailed instructions.<BR><BR>
 
