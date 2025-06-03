@@ -4,7 +4,7 @@ date: 2025-06-03
 layout: post
 ---
 
-This page will show you how to set up contact centre flows to perform two functions:
+This page will show you how to set up contact centre flows to perform two functions via a call in number. Users will be able to call in to a telephone number to perform the following actions:
 
 <ul>
 <li>Update the on call telephone number within a variable within Webex CC that can be used elsewhere</li>
