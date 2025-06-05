@@ -9,7 +9,7 @@ This page will show you how to set up contact centre flows to perform two useful
 <ul>
 <li>Update a global variable that contains an on call telephone number that can be used elsewhere. This flow can support multiple on call telephone numbers, referenced by a departmental PIN that can be used for authentication purposes.</li>
 <li>Update a variable that contains a status, this can be used to open or close the contact centre manually via IVR.</li>
-<ul>
+</ul>
 <BR>
 <a href="/assets/files/CC_OnCall_Changer_GlobalVariable.json" target="_blank">On Call Changer Flow Download Link</a><BR><BR>
 
