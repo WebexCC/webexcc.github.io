@@ -53,7 +53,7 @@ Output:
 
 Javascript:
 
-```
+~~~ javascript
 export const handle = async (request, response) => {
     const { lower_bound, upper_bound } = request.inputs;
 
@@ -66,7 +66,7 @@ export const handle = async (request, response) => {
 
     return response;
 }
-```
+~~~
 
 # Regex Pattern Matcher
 
@@ -83,7 +83,7 @@ Output:
 
 Javascript:
 
-```
+~~~ javascript
 export const handle = async (request, response) => {
     const { needle, haystack } = request.inputs;
     try {
@@ -94,4 +94,4 @@ export const handle = async (request, response) => {
     }
     return response;
 }
-```
+~~~
