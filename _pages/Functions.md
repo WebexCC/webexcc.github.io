@@ -22,7 +22,7 @@ Output:
 
 Javascript:
 
-```
+~~~ javascript
 export const handle = async (request, response) => {
     const { input } = request.inputs;
 
@@ -36,7 +36,7 @@ export const handle = async (request, response) => {
 
     return response;
 }
-```
+~~~
 
 # Random Number Generator
 
