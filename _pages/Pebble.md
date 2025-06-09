@@ -84,7 +84,7 @@ Returns the name of the day of the week for tomorrow.
 
 <!-- {%raw%} -->
 
-Expression: **`{{ (now() | epoch(inMillis=true) + 86400000) | date("EEEE") }}`**
+Expression: **`{{ now() | epoch(inMillis=true) + 86400000) | date("EEEE") }}`**
 
 Result: **`Saturday`**
 
