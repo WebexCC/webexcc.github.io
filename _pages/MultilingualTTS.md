@@ -2,7 +2,6 @@
 title: Multilingual TTS
 date: 2025-06-09
 layout: post
-mermaid: true
 ---
 
 **Multilingual TTS** refers to a technique inside of Webex CC, which allows for multiple language support within a single Flow, with the use of Text to Speech (TTS), and without the need for parallel activities; making for a concise and effencient flow.
