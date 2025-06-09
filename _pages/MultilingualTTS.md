@@ -43,6 +43,7 @@ In the above example, the system will say "Hello, world!" to the caller in the d
 In order to change the voice, first refer to the native TTS documentation for your choices.  As of this writing, there are only two voice choices per language: one masculine voice and one feminin voice.  I will switch to the masculine voice for my default language in my example below.
 
 **Example:**
+```mermaid
 flowchart LR
     gv["`Global Variables
     Global_VoiceName
@@ -55,6 +56,7 @@ flowchart LR
     _Hello, world!_
     `"]
     pm1-->dc1[Disconnect Contact]
+```
 
 > ##### TIP
 > 
@@ -73,6 +75,7 @@ The first thing you should know is: TTS is not a translation service.  If you te
 In order to change the language, first refer to the native TTS documentation for your choices.  As of this writing, there are 22 languages to choose from.  I will switch to Spanish, US dialect: es-US, in my example below.
 
 **Example:**
+```mermaid
 flowchart LR
     gv["`Global Variables
     Global_Language
@@ -85,6 +88,7 @@ flowchart LR
     _¡Hola Mundo!_
     `"]
     pm1-->dc1[Disconnect Contact]
+```
 
 > ##### TIP
 > 
@@ -102,6 +106,7 @@ Sometimes you publish phone numbers for specific language support, e.g., you pub
 For the example below, I will use the simple option with the _Case_ activity, and I am introducing a new String variable _spanish\_line_ which holds the phone number for my...well...spanish line.  I'm using an example phone number of 2000, but as some of you may know, we would need a full +E164 number here in production.
 
 **Example:**
+```mermaid
 flowchart LR
     lv["`Flow Variables
     _spanish_line = 2000_
@@ -138,6 +143,7 @@ flowchart LR
     `"]
     pm1-->dc1[Disconnect Contact]
     pm2-->dc1
+```
 
 Let us take a moment to realize that in order to speak to the customer in each language, I need two separate _Play Message_ activites, since I need to translate the words correctly and type them differently in each activity.  There is no ability to have language specific TTS inputs inside of a single activity. Possible future enhancement?  Let's hope!
 
@@ -152,6 +158,7 @@ Also, we've had the ability to set multiple variables inside of a _Set Variable_
 In the below example I am introducing a new String vairable _welcome_, which has no initial starting value, and is set at runtime, after we know which language the caller needs.
 
 **Example:**
+```mermaid
 flowchart LR
     lv["`Flow Variables
     _spanish_line = 2000_
@@ -186,6 +193,7 @@ flowchart LR
     `"]
     sv2-->pm1
     pm1-->dc1[Disconnect Contact]
+```
 
 # Storing Text in JSON
 
@@ -231,6 +239,7 @@ This allows us to refer to the welcome prompt, simply as `{{ tts.welcome }}`, as
 {: .block-tip}
 
 **Example:**
+```mermaid
 flowchart LR
     lv["`Flow Variables
     _spanish_line = 2000_
@@ -263,6 +272,7 @@ flowchart LR
     `"]
 
     pm1-->dc1[Disconnect Contact]
+```
 
 # Menu Driven Language Choice
 
@@ -287,6 +297,7 @@ My _tts_ JSON variable would look like this:
 ~~~
 
 **Example:**
+```mermaid
 flowchart LR
     lv["`Flow Variables
     _tts_
@@ -339,3 +350,4 @@ flowchart LR
     `"]
 
     pm1-->dc1[Disconnect Contact]
+```
