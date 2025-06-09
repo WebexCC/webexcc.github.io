@@ -23,11 +23,13 @@ There are two main reasons to mention that:
 In order to get TTS to work in your flow, you simply use an Activity which is capable of playing TTS to the caller, and type the literal text as you want it read out.
 
 **Example:**
+```mermaid
 flowchart LR
     start[NewPhoneContact]-->pm1["`Play Message
     _Hello, world!_
     `"]
     pm1-->dc1[Disconnect Contact]
+```
 
 In the above example, the system will say "Hello, world!" to the caller in the default language and voice.
 
