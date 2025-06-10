@@ -17,7 +17,7 @@ There are two main reasons to mention that:
 > This is not a limitation if you bring [Google TTS](https://help.webex.com/en-us/article/ctge8i/Configure-Google-connector-for-Webex-Contact-Center) to the party; therefore, your multilingual solution will look different, although this method would still work with Google TTS.
 {: .block-tip}
 
-# A Simple Single Language TTS Flow
+# A Simple Default Language TTS Flow
 
 In order to get TTS to work in your flow, you simply use an Activity which is capable of playing TTS to the caller, and type the literal text as you want it read out.
 
