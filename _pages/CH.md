@@ -363,7 +363,7 @@ Now you can continue with Lab 2 or try the bonus SSO task below.
 >In this section you will learn how to enable Single sign-on (SSO) in Control Hub. It enables users to sign in to Webex securely by authenticating to your organizations common identity provider (IdP). The Webex App uses the Webex service to communicate with the Webex Platform Identity Service. The identity service authenticates with your identity provider (IdP)
 {: .block-warning }
  
-- From the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, and then scroll to Authentication, and then toggle on the Single sign-on setting to start the setup wizard.
+- From the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Security , and under the Authentication tab click Activate SSO option to start the setup wizard.
 
 - Select SAML as the identity provider and click Next.
 
